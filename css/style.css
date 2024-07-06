@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family:  "Roboto", sans-serif;
 }
 
 body{
@@ -21,9 +21,11 @@ li{
 }
 
 .header{
+    background: #fff;
     width: 100%;
-    display: inline-flex;
-    box-shadow:0 10px 100px rgba(0,0,0,0.5);
+    box-shadow:0 10px 100px rgba(0,0,0,0.1);
+    position: absolute;
+    z-index: 1000;
 }
 
 .header__content{
@@ -75,4 +77,89 @@ li{
 
 .header__link{
     padding: 15px;
+    color: #333;
+    text-transform: uppercase;
+    font-size:small;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header__link:hover{
+    color: #047a9c;
+}
+
+.home{
+    background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(../assets/svg/background.svg);
+    height: 100vh;
+    position: relative;
+}
+
+.home__content{
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.home__heading{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #111;
+    font-weight: 800;
+}
+
+.home__info{
+    margin: 2rem 2rem 0;
+}
+
+.home__info-text{
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.home__cta{
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+
+.home__cta-btn{
+    background: #047a9c;
+    color: #fff;
+    padding: 1rem 4.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+.home__socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: .5rem;
+}
+
+.home__social{
+    width: 3rem;
+}
+
+.home__social-icon-link{
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.home__social-icon-link:hover{
+    background: #c5d9de;
 }
