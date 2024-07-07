@@ -24,7 +24,7 @@ li{
     background: #fff;
     width: 100%;
     box-shadow:0 10px 100px rgba(0,0,0,0.1);
-    position: absolute;
+    position: fixed;
     z-index: 1000;
 }
 
@@ -76,10 +76,10 @@ li{
 }
 
 .header__link{
-    padding: 15px;
+    padding: 20px;
     color: #333;
     text-transform: uppercase;
-    font-size:small;
+    font-size:medium;
     font-weight: bold;
     letter-spacing: 1px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -104,7 +104,7 @@ li{
 }
 
 .home__heading{
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-align: center;
@@ -162,4 +162,52 @@ li{
 
 .home__social-icon-link:hover{
     background: #c5d9de;
+}
+
+.about__pad{
+    background: #fff;
+    padding: 8rem 0;
+}
+
+.about__container{
+    margin: auto;
+    width: 92%;
+}
+
+
+.about__heading{
+    margin-bottom: 5rem;
+}
+
+.about__heading-text{
+    display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #111;
+    font-weight: bold;
+    position: relative;
+}
+
+.about__heading-text::after{
+    content: "";
+    position: absolute;
+    background: #047a9c;
+    height: 5px;
+    width: 2rem;
+    top: calc(100% + 1.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.about__heading-sub{
+    display: block;
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+    line-height: 1.6;
 }
