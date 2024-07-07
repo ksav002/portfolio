@@ -24,6 +24,14 @@ li{
     list-style: none;
 }
 
+textarea{
+    resize: none;
+}
+
+input:focus, button:focus, a:focus, textarea:focus{
+    outline: none;
+}
+
 .header{
     background: #fff;
     width: 100%;
@@ -127,21 +135,29 @@ li{
 }
 
 .home__cta{
-    margin: 2rem 0 0 0;
+    margin-top: 3rem;
     text-align: center;
 }
 
-.home__cta-btn{
+.btn{
     background: #047a9c;
     color: #fff;
-    padding: 1rem 4.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.2rem;
     letter-spacing: 1.5px;
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     display: inline-block;
+    transition: transform .3s;
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+}
+
+.cta-btn{
+    padding: 1rem 4.5rem;
+    font-size: 1.2rem;
 }
 
 .home__socials{
@@ -213,7 +229,7 @@ li{
     margin: auto;
     font-weight: 400;
     line-height: 1.6;
-    max-width: 80rem;
+    max-width: 50rem;
 }
 
 .about{
@@ -296,4 +312,97 @@ li{
     font-size: 1.2rem;
     color: #666;
     line-height: 1.7;
+}
+
+.contact{
+    background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url(../assets/svg/background.svg);
+}
+
+.contact__form-container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #fff;
+    padding: 2rem;
+    text-align: right;
+    border-radius: 5px;
+    margin: 3rem auto 0;
+    max-width: 50rem;
+}
+
+.contact__form-field{
+    margin-bottom: 2rem;
+}
+
+.contact__form-label{
+    color: #666;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact__form-input{
+    color: #333;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.submit-btn{
+    width: 20%;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.footer{
+    background: #000;
+    color: #fff;
+}
+
+.footer__upper{
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem 0;
+}
+
+.footer__upper-row-1{
+    order: 2;
+}
+
+.footer__upper-row-2{
+    order: 1;
+    width: 40%;
+}
+
+.footer__heading{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer__socials{
+    margin-top: 1rem;
+}
+
+.footer__desc{
+    margin-top: 1rem;
+}
+
+.footer__icon{
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+.footer__lower{
+    padding: 3rem 0;
+    border-top: 1px solid #444;
+    color: #eee;
+    font-size: 0.8rem;
+    text-align: center;
 }
