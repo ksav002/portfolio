@@ -406,3 +406,56 @@ input:focus, button:focus, a:focus, textarea:focus{
     font-size: 0.8rem;
     text-align: center;
 }
+
+
+/* res */
+.header__nav-res{
+    display: none;
+}
+
+.header__res-content{
+    background: #fff;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 840px) {
+    .header__nav-res{
+        display: block;
+    }
+
+    .header__nav-links{
+        display: none;
+    }
+
+    .menu-d-none{
+        display: none;
+    }
+
+    .home__socials{
+        display: none;
+    }
+
+    .home__content{
+        left:50%;
+        transform: translate(-50%, -55%);
+    }
+
+    .about__content{
+        grid-template-columns: 1fr;
+        grid-gap: 6rem;
+    }
+
+    .projects__row{
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+
+    .projects__row-img{
+        height: 300px;
+    }
+
+    .submit-btn{
+        width: 100%;
+    }
+}
