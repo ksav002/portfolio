@@ -11,7 +11,6 @@ headerLogo.addEventListener('click',()=>{
 
 headerResContentLink.forEach(link => { 
     link.addEventListener('click',()=>{
-        console.log('a');
         headerResContent.classList.remove('header__res-content--active');
         menuButtonOpen.classList.remove('menu-d-none');
         menuButtonClose.classList.add('menu-d-none');

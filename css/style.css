@@ -438,7 +438,7 @@ input:focus, button:focus, a:focus, textarea:focus{
 }
 
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 750px) {
     .header__nav-res{
         display: block;
     }
