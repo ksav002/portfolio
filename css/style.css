@@ -471,7 +471,7 @@ input:focus, button:focus, a:focus, textarea:focus{
     }
 
     .projects__row-img{
-        height: 300px;
+        height: 200px;
     }
 
     .submit-btn{
