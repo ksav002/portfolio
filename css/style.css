@@ -416,6 +416,25 @@ input:focus, button:focus, a:focus, textarea:focus{
 .header__res-content{
     background: #fff;
     width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.header__res-content-link a{
+    display: block;
+    padding: 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.header__res-content-link a:hover{
+    color: #047a9c;
 }
 
 
@@ -458,4 +477,12 @@ input:focus, button:focus, a:focus, textarea:focus{
     .submit-btn{
         width: 100%;
     }
+
+    .header__res-content--active{
+        background: #fff;
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+        display:contents;
+    } 
 }
