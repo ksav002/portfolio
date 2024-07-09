@@ -6,7 +6,7 @@ const headerResContent = document.querySelector('.header__res-content');
 const headerResContentLink = document.querySelectorAll('.header__res-content-links a');
 
 headerLogo.addEventListener('click',()=>{
-    window.location.href = 'index.html';
+    window.location.href = './';
 });
 
 headerResContentLink.forEach(link => { 
