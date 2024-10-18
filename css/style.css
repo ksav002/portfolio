@@ -6,6 +6,10 @@
     font-family:  "Roboto", sans-serif;
 }
 
+::selection {
+    background: rgb(87, 204, 230);
+  }
+
 html{
     scroll-behavior: smooth;
 }
@@ -245,6 +249,11 @@ input:focus, button:focus, a:focus, textarea:focus{
 .about__content-text-title{
     font-size: 2.4rem;
     margin-bottom: 2rem;
+}
+
+.contact-btn {
+    padding: 0.8rem 3.5rem;
+    font-size: 1rem;
 }
 
 .about__content-skills-title{
