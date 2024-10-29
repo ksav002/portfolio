@@ -117,6 +117,7 @@ input:focus, button:focus, a:focus, textarea:focus{
     top: 55%;
     left: 50%;
     transform: translate(-50%, -55%);
+    max-width: 50rem;
 }
 
 .home__heading{
@@ -130,12 +131,14 @@ input:focus, button:focus, a:focus, textarea:focus{
 
 .home__info{
     margin: 2rem 2rem 0;
+    
 }
 
 .home__info-text{
     color: #333;
     font-size: 1.2rem;
     text-align: center;
+    width: 100%;
 }
 
 .home__cta{
