@@ -254,7 +254,7 @@ input:focus, button:focus, a:focus, textarea:focus{
     margin-bottom: 2rem;
 }
 
-.contact-btn {
+.ctas-btn {
     padding: 0.8rem 3.5rem;
     font-size: 1rem;
 }
@@ -312,6 +312,7 @@ input:focus, button:focus, a:focus, textarea:focus{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .projects__row-content-title{
@@ -324,6 +325,7 @@ input:focus, button:focus, a:focus, textarea:focus{
     font-size: 1.2rem;
     color: #666;
     line-height: 1.7;
+    margin-bottom: 3rem;
 }
 
 .contact{
@@ -497,4 +499,13 @@ input:focus, button:focus, a:focus, textarea:focus{
         opacity: 1;
         display:contents;
     } 
+}
+
+@media only screen and (max-width: 56.25em) {
+    .projects__row {
+        grid-template-columns: 1fr;
+    }
+    .projects__row-content {
+        align-items: center;
+    }
 }
