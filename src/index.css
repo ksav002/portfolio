@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Global Reset & Variables */
+:root {
+  --bg-dark: #050505;
+  --bg-light: #ffffff;
+
+  --surface-dark: rgba(20, 20, 20, 0.6);
+  --surface-light: rgba(245, 245, 250, 0.6);
+
+  --border-dark: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(0, 0, 0, 0.08);
+
+  --text-primary-dark: #f5f5f5;
+  --text-primary-light: #1a1a1a;
+
+  --text-muted-dark: #9ca3af;
+  --text-muted-light: #52525b;
+
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-orange: #f97316;
+  --accent-purple: #a855f7;
+  --accent-red: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Background Effects */
+.gradient-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  left: 20%;
+  background: var(--accent-blue);
+  animation: float 20s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  bottom: -50px;
+  right: 20%;
+  background: var(--accent-purple);
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.blob-3 {
+  width: 450px;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--accent-orange);
+  opacity: 0.15;
+  animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.grain-texture {
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
