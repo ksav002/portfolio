@@ -115,7 +115,7 @@ export default function App() {
               <span className="tooltip">GitHub</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/keshabpoudel2003/"
+              href="https://www.linkedin.com/in/keshabpoudel/"
               target="_blank"
               rel="noreferrer"
               className="social-link"
