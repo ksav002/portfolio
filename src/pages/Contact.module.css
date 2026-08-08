@@ -1,0 +1,74 @@
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
+  color: var(--text-primary);
+}
+
+.panel {
+  text-align: left;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.socialList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--text-primary);
+  background: var(--surface-raised);
+  transition: color var(--transition-fast), background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .socialLink:hover {
+    color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+  }
+}
+
+.socialLink:active {
+  transform: scale(0.94);
+}

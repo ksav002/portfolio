@@ -1,0 +1,21 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.spinner {
+  color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

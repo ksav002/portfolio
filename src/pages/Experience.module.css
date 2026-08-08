@@ -1,0 +1,506 @@
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 5.5vw, 3rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 60ch;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.riverPanel {
+  position: relative;
+  overflow: clip;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 130px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--bg) 0%,
+    var(--bg) 15%,
+    rgba(26, 26, 27, 0.7) 55%,
+    transparent 100%
+  );
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--bg) 0%,
+    var(--bg) 15%,
+    rgba(26, 26, 27, 0.7) 55%,
+    transparent 100%
+  );
+}
+
+.riverScroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 46px 0 40px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.riverScroll.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+  user-select: none;
+}
+
+.riverScroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.riverScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.riverScroll::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+
+.riverCanvas {
+  position: relative;
+}
+
+.scrollHint {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
+.riverSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.glowWide {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 26;
+  stroke-linecap: round;
+  opacity: 0.3;
+  animation: riverBreathe 12s ease-in-out infinite;
+}
+
+.braidPath {
+  fill: none;
+  stroke: var(--accent-strong);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  opacity: 0.28;
+  filter: blur(0.3px);
+}
+
+.braidPathFaint {
+  fill: none;
+  stroke: #ffcf9a;
+  stroke-width: 1;
+  stroke-linecap: round;
+  opacity: 0.16;
+}
+
+.trailPath {
+  fill: none;
+  stroke: #5a3a26;
+  stroke-width: 11;
+  stroke-linecap: round;
+  opacity: 0.4;
+  filter: blur(0.4px);
+}
+
+.basePath {
+  fill: none;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  opacity: 0.95;
+}
+
+.glowPath {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.45;
+  animation: riverBreathe 12s ease-in-out infinite;
+}
+
+.travelPath {
+  fill: none;
+  stroke: #fff1de;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  opacity: 0.85;
+  stroke-dasharray: 60 620;
+  filter: blur(1px);
+  animation: riverTravel 16s linear infinite;
+}
+
+.travelPathSlow {
+  fill: none;
+  stroke: var(--accent-strong);
+  stroke-width: 6;
+  stroke-linecap: round;
+  opacity: 0.5;
+  stroke-dasharray: 140 760;
+  filter: blur(2px);
+  animation: riverTravel 26s linear infinite;
+}
+
+@keyframes riverBreathe {
+  0%, 100% { opacity: 0.26; }
+  50% { opacity: 0.46; }
+}
+
+@keyframes riverTravel {
+  to { stroke-dashoffset: -900; }
+}
+
+.dust {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  opacity: var(--dust-opacity, 0.2);
+  animation: dustTwinkle var(--dust-duration, 6s) ease-in-out infinite;
+  animation-delay: var(--dust-delay, 0s);
+}
+
+@keyframes dustTwinkle {
+  0%, 100% { opacity: var(--dust-opacity, 0.2); }
+  50% { opacity: calc(var(--dust-opacity, 0.2) * 0.2); }
+}
+
+.particle {
+  position: absolute;
+  margin-left: -2px;
+  margin-top: -2px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff1de 0%, var(--accent-strong) 55%, transparent 100%);
+  opacity: 0;
+  pointer-events: none;
+  animation-name: particleDrift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes particleDrift {
+  0% { opacity: 0; transform: translate(0, 4px) scale(0.7); }
+  15% { opacity: 0.85; }
+  55% { opacity: 0.5; }
+  100% { opacity: 0; transform: translate(46px, -22px) scale(1.15); }
+}
+
+.focusGlow {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  margin-left: -95px;
+  margin-top: -95px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 68%);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: 0;
+  transition: left 900ms var(--ease-in-out), top 900ms var(--ease-in-out);
+}
+
+.milestone {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.connector {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(var(--border-strong), transparent);
+  transform: translateX(-50%);
+  transition: background var(--transition-med), opacity var(--transition-med);
+}
+
+.connectorUp {
+  bottom: 100%;
+  height: 50px;
+  background: linear-gradient(var(--border-strong), transparent 85%);
+}
+
+.connectorDown {
+  top: 100%;
+  height: 50px;
+  background: linear-gradient(transparent 15%, var(--border-strong));
+}
+
+.connectorActive.connectorUp,
+.milestone:hover .connectorUp {
+  background: linear-gradient(var(--accent), transparent 85%);
+}
+
+.connectorActive.connectorDown,
+.milestone:hover .connectorDown {
+  background: linear-gradient(transparent 15%, var(--accent));
+}
+
+.node {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-muted);
+  box-shadow: 0 0 0 0 var(--accent-soft);
+  animation: nodeFlicker 5s ease-in-out infinite;
+  cursor: pointer;
+  transition: border-color var(--transition-med), box-shadow var(--transition-med),
+    transform var(--transition-med);
+}
+
+.nodeCore {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd9a8 0%, var(--accent) 70%, transparent 100%);
+  opacity: 0.55;
+  transition: opacity var(--transition-med);
+}
+
+.nodeIcon {
+  position: relative;
+  opacity: 0;
+  color: var(--bg);
+  transition: opacity var(--transition-med);
+}
+
+@keyframes nodeFlicker {
+  0%, 100% { box-shadow: 0 0 10px -2px var(--accent-soft); }
+  50% { box-shadow: 0 0 16px -2px var(--accent-soft); }
+}
+
+.nodeActive,
+.nodeOpen,
+.milestone:hover .node,
+.node:focus-visible {
+  border-color: var(--accent-strong);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 9px var(--accent-soft), 0 0 26px -2px var(--accent);
+  outline: none;
+  animation: none;
+}
+
+.nodeActive .nodeCore,
+.nodeOpen .nodeCore,
+.milestone:hover .nodeCore,
+.node:focus-visible .nodeCore {
+  opacity: 1;
+}
+
+.nodeActive .nodeIcon,
+.nodeOpen .nodeIcon,
+.milestone:hover .nodeIcon,
+.node:focus-visible .nodeIcon {
+  opacity: 0.9;
+}
+
+.node::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.milestone:hover .node::after,
+.node:focus-visible::after {
+  animation: nodeRipple 1200ms var(--ease-out);
+}
+
+@keyframes nodeRipple {
+  0% { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.8); }
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  padding: 4px 2px;
+  text-align: center;
+  
+  opacity: 0.82;
+  transition: opacity var(--transition-med), transform var(--transition-med),
+    filter var(--transition-med);
+  filter: blur(0.2px);
+}
+
+.contentAbove {
+  bottom: calc(100% + 58px);
+}
+
+.contentBelow {
+  top: calc(100% + 58px);
+}
+
+.contentActive,
+.milestone:hover .content {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.contentAbove.contentActive,
+.milestone:hover .contentAbove {
+  transform: translate(-50%, -4px);
+}
+
+.contentBelow.contentActive,
+.milestone:hover .contentBelow {
+  transform: translate(-50%, 4px);
+}
+
+.contentToggle {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contentToggle:focus-visible {
+  outline: 1.5px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.period {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--accent-strong);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.typeTag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  transition: color var(--transition-med);
+}
+
+.contentToggle:hover .title {
+  color: var(--accent-strong);
+}
+
+.details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 360ms var(--ease-in-out), opacity 280ms var(--ease-out);
+}
+
+.detailsOpen {
+  max-height: 220px;
+  opacity: 1;
+}
+
+.org {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 8px 0 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 6px 0 0;
+}
+
+@media (max-width: 640px) {
+  .content {
+    width: 190px;
+  }
+
+  .riverScroll {
+    padding: 34px 0 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glowWide,
+  .glowPath,
+  .travelPath,
+  .travelPathSlow,
+  .node,
+  .dust,
+  .particle {
+    animation: none !important;
+  }
+}
