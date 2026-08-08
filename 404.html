@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Keshab Poudel — Redirecting…</title>
+    <!--
+      GitHub Pages only serves static files, so it has no idea that
+      /projects or /resume are valid client-side routes. When someone
+      requests one of those paths directly, GitHub Pages serves this
+      404.html instead. We stash the originally-requested path in
+      sessionStorage and redirect to the site root; index.html then
+      reads that path back out and hands it to React Router.
+
+      This works for hidden pages too (e.g. /resume) because it doesn't
+      care whether a route is in the navbar — it just restores whatever
+      path was actually requested.
+    -->
+    <script>
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/'" />
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
