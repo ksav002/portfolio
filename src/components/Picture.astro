@@ -1,0 +1,29 @@
+---
+// Responsive <picture> built from the copies made by scripts/optimize-images.mjs.
+import manifest from '../lib/image-manifest.json';
+
+interface Props {
+  name: keyof typeof manifest;
+  alt: string;
+  sizes: string;
+  class?: string;
+  eager?: boolean;
+}
+const { name, alt, sizes, class: className, eager = false } = Astro.props;
+const image = manifest[name];
+const srcset = (list: { src: string; width: number }[]) => list.map((s) => `${s.src} ${s.width}w`).join(', ');
+const fallback = (image.jpeg.length ? image.jpeg : image.webp).at(-1)!;
+---
+<picture class={className}>
+  <source type="image/avif" srcset={srcset(image.avif)} sizes={sizes} />
+  <source type="image/webp" srcset={srcset(image.webp)} sizes={sizes} />
+  <img
+    src={fallback.src}
+    alt={alt}
+    width={image.width}
+    height={image.height}
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : 'auto'}
+    decoding="async"
+  />
+</picture>

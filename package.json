@@ -1,23 +1,27 @@
 {
   "name": "poudelkeshab-portfolio",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
+  "version": "1.0.0",
+  "description": "Keshab Poudel's portfolio: a one-page site built with Astro.",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "images": "node scripts/optimize-images.mjs",
+    "favicons": "node scripts/make-favicons.mjs"
+  },
+  "engines": {
+    "node": ">=22.22.0"
   },
   "dependencies": {
-    "lucide-react": "^0.469.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.4.0",
-    "react-router-dom": "^7.1.0",
-    "simplex-noise": "^4.0.3"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.7"
+    "@astrojs/sitemap": "3.7.4",
+    "@fontsource-variable/onest": "5.3.1",
+    "@fontsource/onest": "5.3.1",
+    "@tabler/icons": "3.49.0",
+    "astro": "7.4.1",
+    "pdf-lib": "1.17.1",
+    "satori": "0.63.0",
+    "sharp": "0.35.5"
   }
 }

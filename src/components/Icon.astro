@@ -1,0 +1,32 @@
+---
+// Tabler Icons (MIT), inlined as SVG at build time: no icon font, no JavaScript.
+// `name` is any outline icon from @tabler/icons, e.g. "mail", "brand-github".
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  name: string;
+  class?: string;
+}
+const { name, class: className } = Astro.props;
+const file = path.join(process.cwd(), 'node_modules/@tabler/icons/icons/outline', `${name}.svg`);
+const inner = readFileSync(file, 'utf8')
+  .replace(/^[\s\S]*?<svg[^>]*>/, '')
+  .replace(/<\/svg>\s*$/, '')
+  .replace('<path stroke="none" d="M0 0h24v24H0z" fill="none" />', '')
+  .trim();
+---
+<svg
+  class:list={['icon', className]}
+  viewBox="0 0 24 24"
+  width="20"
+  height="20"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+  set:html={inner}
+/>

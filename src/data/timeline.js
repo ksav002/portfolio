@@ -6,7 +6,7 @@ export const timeline = [
     org: 'Upveda Technology',
     period: 'August 2025 — Present',
     description:
-      'Contributed to an enterprise AI support agent (n8n workflows + Pinecone RAG) as part of a team.',
+      'Contributed to an enterprise AI support agent as part of a team, building its RAG system in n8n.',
   },
   {
     id: 'work-intern',

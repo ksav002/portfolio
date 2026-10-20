@@ -1,249 +1,97 @@
-# poudelkeshab — portfolio
+# Keshab Poudel — portfolio
 
-Personal portfolio site for Keshab Poudel. Built with React 19, Vite, and CSS Modules. No UI framework or CSS-in-JS — all styling is hand-written. Deployed to GitHub Pages at [poudelkeshab.com.np](https://poudelkeshab.com.np).
+My personal portfolio, live at **[poudelkeshab.com.np](https://poudelkeshab.com.np)**.
 
----
+It's a one-page site about who I am, what I build, and how to reach me. The page has two looks:
+
+- **Professional** (light) is the default.
+- **Creative** (dark) is turned on with the round button in the bottom-right corner. It adds a couple of small extras and remembers your choice.
+
+The site is static, built with [Astro](https://astro.build), with no front-end framework. Hosting is GitHub Pages.
 
 ## Stack
 
-| Layer | Choice |
+| Part | What it uses |
 |---|---|
-| Framework | React 19 |
-| Bundler | Vite 6 |
-| Routing | React Router 7 |
-| Styling | CSS Modules + global design tokens |
-| Icons | Lucide React + React Icons (Simple Icons) |
-| Animation | CSS keyframes + Canvas (river timeline) |
-| Noise | simplex-noise (river wobble) |
-| Deployment | GitHub Pages with a custom domain |
+| Site | Astro 7 (static output), plain CSS and a few small JavaScript files |
+| Font and icons | Onest (self-hosted through Fontsource), Tabler icons (inlined as SVG at build time) |
+| CV | `pdf-lib`: a text PDF built from the site data on every build |
+| Share image, favicons, images | `satori` and `sharp` |
+| SEO | `@astrojs/sitemap`, JSON-LD (`ProfilePage`, `Person`, projects), `llms.txt` |
+| Hosting | GitHub Pages, deployed by GitHub Actions |
 
----
+## Run it locally
 
-## Getting started
+You need Node.js 22.22 or newer.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
-npm run build      # output → dist/
-npm run preview    # preview the production build locally
 ```
 
-Node 18 or later required.
+```bash
+npm run dev
+```
 
----
+The dev server runs at http://localhost:4321.
+
+| Command | What it does |
+|---|---|
+| `npm run build` | Builds the site into `dist/` |
+| `npm run preview` | Serves the built site locally |
+| `npm run images` | Makes the small AVIF, WebP and JPEG copies in `public/images/opt/` |
+| `npm run favicons` | Redraws the favicon set in `public/` |
 
 ## Project structure
 
 ```
 src/
-  data/           # All editable content lives here
-    profile.js      # Name, role, tagline, email, avatar path
-    projects.js     # Project list (title, tags, links, featured flag)
-    skills.js       # Skill groups shown on Home and About
-    socials.js      # Social links + their Lucide icons
-    techIcons.js    # Tag string → icon component map for project cards
-    timeline.js     # Experience and education entries
-  hooks/
-    useSEO.js       # Sets <title>, meta description, og: tags, canonical per page
-    useReveal.js    # IntersectionObserver hook — triggers fadeUp once on scroll entry
-  layouts/
-    MainLayout.jsx  # Navbar + main + Footer wrapper
-    BareLayout.jsx  # No chrome — for hidden/custom pages
-  components/
-    Navbar.jsx
-    Footer.jsx
-    LoadingIndicator.jsx
+  data/          content: profile, projects, skills, timeline, socials
+  lib/           shared facts (site.js), JSON-LD (seo.js), image sizes (image-manifest.json)
+  layouts/       Base.astro: head tags, menu, footer, mode button
   pages/
-    Home.jsx
-    Projects.jsx
-    Experience.jsx
-    About.jsx
-    Contact.jsx
-    NotFound.jsx
-  routes.jsx        # Central route registry
-  styles/
-    tokens.css      # Design tokens (colors, type, spacing, easing)
-    global.css      # Resets, base styles, shared utilities
-public/
-  images/           # Avatar and project screenshots
-  CNAME             # Custom domain for GitHub Pages
-  sitemap.xml
-  robots.txt
-  404.html          # Redirects unknown paths to / for SPA routing on GitHub Pages
+    index.astro              the one page
+    404.astro                not-found page
+    keshab-poudel-cv.pdf.js  builds /keshab-poudel-cv.pdf
+    og.png.js                builds /og.png (link preview image)
+    llms.txt.js              builds /llms.txt (plain-text summary for AI tools)
+  components/    Icon.astro (Tabler icons), Picture.astro (responsive images)
+  scripts/       mode switch, Creative extras, copy button, menu highlight
+  styles/        global.css: both modes and every component
+scripts/         image and favicon generators
+public/          images, favicons, robots.txt, CNAME
 ```
-
----
 
 ## Editing content
 
-All content is in `src/data/`. No CMS, no database — just edit the JS files and redeploy.
+All content lives in `src/data/`. The page, the CV, the share image, `llms.txt` and the search-engine data are all built from these files, so each change only has to be made once.
 
-### Personal info
-
-Edit `src/data/profile.js`:
-
-```js
-export const profile = {
-  name: 'Keshab Poudel',
-  role: 'Full stack developer',
-  tagline: '...',
-  email: 'you@example.com',
-  avatar: '/images/avatar.jpg',
-}
-```
-
-Replace `/images/avatar-placeholder.svg` with a real photo at `public/images/avatar.jpg` and update the `avatar` path.
-
-### Projects
-
-Edit `src/data/projects.js`. Each project takes:
-
-```js
-{
-  slug: 'my-project',          // unique, URL-safe string (not used in routing yet, just as React key)
-  title: 'My project',
-  summary: 'One paragraph.',
-  tags: ['React', 'Django'],   // must match keys in techIcons.js to render as icons
-  status: 'public',            // 'public' shows a code link; 'private' shows a badge instead
-  codeUrl: 'https://github.com/...', // only used when status is 'public'
-  image: '/images/my-project.jpg',
-  featured: true,              // true = appears on Home page (keep to 2 featured max)
-  role: 'Team project',        // optional — omit for solo work
-}
-```
-
-Add screenshots to `public/images/` and reference them in `image`.
-
-### Adding a tech icon for a new tag
-
-Open `src/data/techIcons.js`. Import the icon and add the tag:
-
-```js
-import { SiNextdotjs } from 'react-icons/si'
-
-export const techIcons = {
-  // ...existing entries
-  'Next.js': SiNextdotjs,
-}
-```
-
-Simple Icons (via `react-icons/si`) covers most tech brands. If there's no official icon, use a Lucide generic (e.g. `Layers`, `Database`, `Cpu`). Any unmapped tag falls back to a text pill automatically — nothing breaks.
-
-### Skills
-
-Edit `src/data/skills.js`. Groups appear in order on Home (as chips) and About (as labeled sections):
-
-```js
-export const skillGroups = [
-  { category: 'Frontend', items: ['React', 'TypeScript'] },
-  { category: 'Backend',  items: ['Django', 'PostgreSQL'] },
-]
-```
-
-### Experience and education
-
-Edit `src/data/timeline.js`. Entries are listed most-recent first (the river timeline reverses them so time flows left-to-right):
-
-```js
-{
-  id: 'work-my-role',        // unique string
-  type: 'work',              // 'work' or 'education'
-  title: 'Senior Engineer',
-  org: 'Company Name',
-  period: 'Jan 2024 — Present',
-  description: 'One or two sentences about the role.',
-}
-```
-
-### Social links
-
-Edit `src/data/socials.js`. Each entry needs a Lucide icon component:
-
-```js
-import { Github, Twitter } from 'lucide-react'
-
-export const socials = [
-  { label: 'GitHub',  href: 'https://github.com/you', Icon: Github  },
-  { label: 'Twitter', href: 'https://twitter.com/you', Icon: Twitter },
-]
-```
-
-The `label` is used as `aria-label` and `title` on the link. Socials appear in the Footer, Contact page, and the Home connect banner.
-
----
-
-## Adding a new page
-
-1. Create `src/pages/MyPage.jsx` and `src/pages/MyPage.module.css`.
-2. Add a route entry in `src/routes.jsx`:
-
-```js
-import MyPage from './pages/MyPage.jsx'
-
-export const routes = [
-  // ...existing routes
-  {
-    path: '/my-page',
-    element: <MyPage />,
-    label: 'My page',
-    showInNav: true,   // false to hide from Navbar
-    layout: 'main',   // 'main' for Navbar+Footer, 'bare' for no chrome
-  },
-]
-```
-
-That's it. The Navbar, router, and layout wrapper all pick it up automatically.
-
----
-
-## SEO
-
-Each page calls `useSEO` to set its own `<title>`, meta description, Open Graph tags, and canonical URL:
-
-```js
-useSEO({
-  title: 'Projects',
-  description: 'A short description for search engines.',
-  path: '/projects',
-})
-```
-
-The site URL is set in `src/hooks/useSEO.js` as `SITE_URL`. Update it if the domain changes. The hook does not use react-helmet — it manipulates the DOM directly, because neither react-helmet nor react-helmet-async currently declare support for React 19.
-
-The JSON-LD structured data block and og:image in `index.html` are static. Update them manually when the domain, name, or avatar change.
-
----
-
-## Design tokens
-
-All colors, typography, spacing, and easing live in `src/styles/tokens.css` as CSS custom properties. Change the accent color site-wide by editing `--accent` and `--accent-strong` in one place:
-
-```css
---accent: #ff8a3d;
---accent-strong: #ff9f5a;
---accent-soft: rgba(255, 138, 61, 0.16);
-```
-
----
-
-## Motion
-
-Entrance animations use the `.fadeUp` class defined in `global.css`. The `useReveal` hook attaches this class once, via `IntersectionObserver`, when the element first scrolls into view. This means animations only fire once — not on every SPA navigation.
-
-The Experience page river uses `requestAnimationFrame` + simplex noise for the wobble animation. Both the rAF loop and all CSS animations respect `prefers-reduced-motion`: the rAF loop exits early and the global CSS override zeroes all durations.
-
----
+- **Profile, skills, socials:** edit `profile.js`, `skills.js` or `socials.js`.
+- **Experience and education:** edit `timeline.js`.
+  - Set `type` to `'work'` or `'education'`.
+  - Write `period` like `August 2025 — Present` or `2021 — 2025`.
+- **A new project:**
+  1. Add an entry to `projects.js`.
+  2. Put its screenshot at `public/images/<slug>.png`.
+  3. Add that file to the list in `scripts/optimize-images.mjs`.
+  4. Run `npm run images`.
 
 ## Deployment
 
-The site is deployed to GitHub Pages via the `gh-pages` branch. The `public/CNAME` file sets the custom domain to `poudelkeshab.com.np`. The `public/404.html` file redirects all unknown paths back to `/` so that React Router handles client-side navigation correctly on GitHub Pages (which otherwise returns a real 404 for deep links).
+GitHub Pages hosts the site. `.github/workflows/deploy.yml` builds it with `withastro/action` on every push to `main`, then publishes it. This needs **Settings → Pages → Build and deployment → Source** set to **GitHub Actions**. The earlier React site was published from the `gh-pages` branch instead.
 
-To deploy manually:
+The domain's DNS is on Cloudflare, which sits in front of GitHub Pages:
 
-```bash
-npm run build
-# then push dist/ to the gh-pages branch, or use the gh-pages npm package
-npx gh-pages -d dist
-```
+- Cloudflare serves the HTTPS certificate.
+- `www` redirects to the bare domain.
+- `public/CNAME` holds the custom domain for GitHub.
 
-The `base` in `vite.config.js` is `/` because the site is served from the apex domain, not a subpath like `/portfolio/`.
+Because traffic goes through Cloudflare, GitHub's Pages settings show "DNS Check in Progress" and can't offer "Enforce HTTPS". HTTPS still works through Cloudflare.
+
+Cloudflare also caches static files such as the favicon, so a changed file can take a few hours to appear.
+
+## Design notes
+
+- `PRODUCT.md` explains who the site is for and the decisions behind it.
+- `DESIGN.md` records the visual system: colours, type, components and rules.
+
+Both are kept with [Impeccable](https://github.com/pbakaus/impeccable).

@@ -1,0 +1,163 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Picture from '../components/Picture.astro';
+import {
+  profile, projects, timeline, skillGroups, shownSocials, extraSocials, whatsapp, headline, cvPath,
+  parsePeriod,
+} from '../lib/site.js';
+
+const github = shownSocials.find((s) => s.label === 'GitHub');
+const linkedin = shownSocials.find((s) => s.label === 'LinkedIn');
+const ordered = [...projects.filter((p) => p.featured), ...projects.filter((p) => !p.featured)];
+const MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const label = (iso) => {
+  const [y, m] = iso.split('-');
+  return m ? `${MONTH[Number(m) - 1]} ${y}` : y;
+};
+const withPeriod = (item) => ({ ...item, period: parsePeriod(item.period) });
+const work = timeline.filter((item) => item.type === 'work').map(withPeriod)
+  .map((item) => ({ ...item, badge: item.period.current ? 'Current' : 'Internship' }));
+const education = timeline.filter((item) => item.type === 'education').map(withPeriod);
+---
+<Base structuredData>
+  <div class="page" id="top">
+    <section class="intro" aria-labelledby="name" data-intro>
+      <div class="intro__photo">
+        <Picture name="keshab-poudel" alt="Portrait of Keshab Poudel" sizes="(max-width: 56rem) 6.5rem, 8.25rem" eager />
+      </div>
+      <h1 id="name">{profile.name}</h1>
+      <p class="intro__role">{profile.role.replace('Full stack', 'Full-stack')}</p>
+      <p class="intro__pitch">{headline}</p>
+      <div class="intro__actions">
+        <a class="btn btn--primary" href={`mailto:${profile.email}`}><Icon name="mail" />Email me</a>
+        <a class="btn btn--outline" href={cvPath} download><Icon name="download" />Download CV</a>
+        <a class="btn btn--outline" href={github.href} target="_blank" rel="me noopener"><Icon name="brand-github" />GitHub</a>
+        <a class="btn btn--outline" href={linkedin.href} target="_blank" rel="me noopener"><Icon name="brand-linkedin" />LinkedIn</a>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="section__head">
+        <h2 id="projects-heading">Projects</h2>
+        <a href={github.href} target="_blank" rel="me noopener">All on GitHub <Icon name="arrow-up-right" /></a>
+      </div>
+      <div class="cards">
+        {ordered.map((project) => (
+          <article class="card" aria-labelledby={`${project.slug}-title`} data-project={project.slug}>
+            <div class="card__media">
+              <Picture
+                name={project.slug}
+                alt={`Screenshot of the ${project.title.split(' —')[0]} project`}
+                sizes="(max-width: 56rem) 92vw, 22rem"
+              />
+            </div>
+            <div class="card__body">
+              <h3 id={`${project.slug}-title`}>{project.title}</h3>
+              <p>{project.summary}</p>
+              <ul class="tags" aria-label="Built with">
+                {project.tags.map((tag) => <li>{tag}</li>)}
+              </ul>
+              <a class="btn btn--outline btn--small" href={project.codeUrl} target="_blank" rel="noopener">
+                <Icon name="brand-github" />View code
+                <span class="visually-hidden">for {project.title.split(' —')[0]}</span>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="section__head">
+        <h2 id="experience-heading">Experience</h2>
+      </div>
+      <ol class="rows">
+        {work.map((row) => (
+          <li class="row">
+            <span class="row__when">
+              <time datetime={row.period.start}>{label(row.period.start)}</time>
+              {' – '}
+              {row.period.current ? 'now' : <time datetime={row.period.end}>{label(row.period.end)}</time>}
+            </span>
+            <div>
+              <h3>{row.title}</h3>
+              <p class="row__org">{row.org}</p>
+              <p>{row.description}</p>
+            </div>
+            <span class:list={['badge', { 'badge--now': row.period.current }]}>{row.badge}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-heading">
+      <div class="section__head">
+        <h2 id="education-heading">Education</h2>
+      </div>
+      <ol class="rows">
+        {education.map((row) => (
+          <li class="row row--plain">
+            <span class="row__when">
+              <time datetime={row.period.start}>{label(row.period.start)}</time>
+              {' – '}
+              <time datetime={row.period.end}>{label(row.period.end)}</time>
+            </span>
+            <div>
+              <h3>{row.title}</h3>
+              <p class="row__org">{row.org}</p>
+              <p>{row.description}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="section__head">
+        <h2 id="skills-heading">Skills</h2>
+      </div>
+      <div class="skills">
+        {skillGroups.map((group) => (
+          <div class="skill-group">
+            <h3>{group.category}</h3>
+            <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Let's talk</h2>
+      <p class="contact__line">Email is the fastest way to reach me. Also open to freelance projects.</p>
+      <p class="contact__email">
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
+        <button class="copy-btn" type="button" data-copy={profile.email} hidden>
+          <Icon name="copy" /><span data-copy-label>Copy</span>
+        </button>
+        <span class="visually-hidden" role="status" data-copy-status></span>
+      </p>
+      <div class="contact__actions">
+        <a class="btn btn--primary" href={`mailto:${profile.email}`}><Icon name="mail" />Email me</a>
+        <a class="btn btn--outline" href={whatsapp.href} target="_blank" rel="noopener" aria-label={`WhatsApp ${whatsapp.handle}`}><Icon name="brand-whatsapp" />WhatsApp</a>
+        <a class="btn btn--outline" href={cvPath} download><Icon name="download" />Download CV</a>
+        <a class="btn btn--outline" href={github.href} target="_blank" rel="me noopener"><Icon name="brand-github" />GitHub</a>
+        <a class="btn btn--outline" href={linkedin.href} target="_blank" rel="me noopener"><Icon name="brand-linkedin" />LinkedIn</a>
+      </div>
+      <ul class="contact__social" aria-label="Other profiles">
+        {extraSocials.map((s) => (
+          <li>
+            <a href={s.href} target="_blank" rel="me noopener" aria-label={s.label} title={s.label}>
+              <Icon name={`brand-${s.label.toLowerCase()}`} />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<script>
+  import '../scripts/copy.js';
+  import '../scripts/nav-highlight.js';
+</script>

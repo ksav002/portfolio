@@ -1,24 +1,21 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+# Dependencies and build output
 node_modules
 dist
-dist-ssr
-*.local
+.astro
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Impeccable scratch (screenshots, question pages, mockups)
+.impeccable/review
+.impeccable/questions
+.impeccable/mocks
+
+# Local tools and secrets
+.claude/
+.env
+.env.*
+
+# System files and logs
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+*.log
+
+# Private family data: never commit or publish
+src/data/familyData.js

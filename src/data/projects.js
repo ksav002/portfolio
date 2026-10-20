@@ -32,15 +32,4 @@ export const projects = [
     image: "/images/karyalaya.png",
     featured: false,
   },
-  {
-    slug: "portfolio-site",
-    title: "This portfolio",
-    summary:
-      "This site itself — a React + Vite personal portfolio with a custom horizontal river timeline on the Experience page, deployed to GitHub Pages.",
-    tags: ["React", "Vite", "CSS Modules"],
-    status: "public",
-    codeUrl: "https://github.com/ksav002/portfolio",
-    image: "/images/project-placeholder.svg",
-    featured: false,
-  },
 ];

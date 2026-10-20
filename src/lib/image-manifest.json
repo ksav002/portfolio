@@ -1,0 +1,139 @@
+{
+  "keshab-poudel": {
+    "width": 720,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/images/opt/keshab-poudel-240.avif",
+        "width": 240
+      },
+      {
+        "src": "/images/opt/keshab-poudel-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/opt/keshab-poudel-720.avif",
+        "width": 720
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/opt/keshab-poudel-240.webp",
+        "width": 240
+      },
+      {
+        "src": "/images/opt/keshab-poudel-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/opt/keshab-poudel-720.webp",
+        "width": 720
+      }
+    ],
+    "jpeg": [
+      {
+        "src": "/images/opt/keshab-poudel-240.jpg",
+        "width": 240
+      },
+      {
+        "src": "/images/opt/keshab-poudel-480.jpg",
+        "width": 480
+      },
+      {
+        "src": "/images/opt/keshab-poudel-720.jpg",
+        "width": 720
+      }
+    ]
+  },
+  "gaze-tracking-system": {
+    "width": 1440,
+    "height": 749,
+    "avif": [
+      {
+        "src": "/images/opt/gaze-tracking-system-640.avif",
+        "width": 640
+      },
+      {
+        "src": "/images/opt/gaze-tracking-system-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/images/opt/gaze-tracking-system-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/opt/gaze-tracking-system-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/opt/gaze-tracking-system-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/opt/gaze-tracking-system-1440.webp",
+        "width": 1440
+      }
+    ],
+    "jpeg": []
+  },
+  "stock-prediction-system": {
+    "width": 1200,
+    "height": 570,
+    "avif": [
+      {
+        "src": "/images/opt/stock-prediction-system-640.avif",
+        "width": 640
+      },
+      {
+        "src": "/images/opt/stock-prediction-system-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/images/opt/stock-prediction-system-1200.avif",
+        "width": 1200
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/opt/stock-prediction-system-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/opt/stock-prediction-system-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/opt/stock-prediction-system-1200.webp",
+        "width": 1200
+      }
+    ],
+    "jpeg": []
+  },
+  "karyalaya": {
+    "width": 960,
+    "height": 456,
+    "avif": [
+      {
+        "src": "/images/opt/karyalaya-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/images/opt/karyalaya-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/opt/karyalaya-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/opt/karyalaya-960.webp",
+        "width": 960
+      }
+    ],
+    "jpeg": []
+  }
+}
