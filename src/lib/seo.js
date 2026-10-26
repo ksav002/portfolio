@@ -2,7 +2,7 @@
 // engines and AI answer tools.
 import {
   SITE_URL, profile, projects, skillGroups, timeline, allSocials, location,
-  factSentence, pageTitle, portraitPath, revision, currentRole,
+  factSentence, pageTitle, portraitPath, currentRole,
 } from './site.js';
 
 const personId = `${SITE_URL}/#person`;
@@ -64,7 +64,8 @@ export function profileGraph() {
         name: pageTitle,
         description: factSentence,
         inLanguage: 'en',
-        dateModified: revision,
+        // Full date and time: Google flags a date-only value as invalid.
+        dateModified: new Date().toISOString(),
         isPartOf: { '@id': `${SITE_URL}/#website` },
         mainEntity: { '@id': personId },
         hasPart: works.map((work) => ({ '@id': work['@id'] })),
