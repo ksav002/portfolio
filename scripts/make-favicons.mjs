@@ -1,5 +1,6 @@
-// Makes the favicon set in public/ from one design: white "KP" in Onest on
-// the site's teal. Run with `npm run favicons` after changing the colours.
+// Makes the favicon set in public/ from one design: "KP" in Host Grotesk on
+// Console's graphite with an amber mark. Run with `npm run favicons` after
+// changing the colours.
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import satori from 'satori';
@@ -7,10 +8,10 @@ import sharp from 'sharp';
 
 const root = path.resolve(import.meta.dirname, '..');
 const pub = (file) => path.join(root, 'public', file);
-const TEAL = '#0f766e';
-const WHITE = '#ffffff';
+const GRAPHITE = '#16191d';
+const AMBER = '#f2b33d';
 
-const font = await readFile(path.join(root, 'node_modules/@fontsource/onest/files/onest-latin-800-normal.woff'));
+const font = await readFile(path.join(root, 'node_modules/@fontsource/host-grotesk/files/host-grotesk-latin-500-normal.woff'));
 
 // Satori draws the letters as outlines, so the SVG needs no font to display.
 async function mark({ size, round }) {
@@ -18,10 +19,10 @@ async function mark({ size, round }) {
   return satori(
     h('div', {
       width: size, height: size, display: 'flex', alignItems: 'center', justifyContent: 'center',
-      background: TEAL, borderRadius: round ? size / 2 : 0, color: WHITE,
-      fontFamily: 'Onest', fontWeight: 800, fontSize: size * 0.44, letterSpacing: -size * 0.012,
+      background: GRAPHITE, borderRadius: round ? size * 0.22 : 0, color: AMBER,
+      fontFamily: 'Host Grotesk', fontWeight: 500, fontSize: size * 0.46, letterSpacing: -size * 0.02,
     }, 'KP'),
-    { width: size, height: size, fonts: [{ name: 'Onest', data: font, weight: 800, style: 'normal' }] },
+    { width: size, height: size, fonts: [{ name: 'Host Grotesk', data: font, weight: 500, style: 'normal' }] },
   );
 }
 

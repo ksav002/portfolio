@@ -1,433 +1,661 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-20T15:04:49+00:00",
-  "title": "Design System: Keshab Poudel",
+  "generatedAt": "2026-10-30T15:53:31.740Z",
+  "title": "Design System: Keshab Poudel portfolio",
   "extensions": {
     "colorMeta": {
       "paper": {
         "role": "neutral",
         "displayName": "Paper",
-        "canonical": "#ffffff",
-        "purpose": "Professional page and every surface (--bg, --surface); text on teal (--accent-ink).",
+        "canonical": "oklch(97.5% 0.006 85)",
+        "purpose": "Professional page ground (--color-paper); scrollbar track, trail dots.",
         "tonalRamp": [
-          "#262626",
-          "#424242",
-          "#5e5e5e",
-          "#7a7a7a",
-          "#969696",
-          "#b2b2b2",
-          "#d1d1d1",
-          "#f2f2f2"
+          "oklch(15% 0.006 85)",
+          "oklch(25% 0.006 85)",
+          "oklch(35% 0.006 85)",
+          "oklch(45% 0.006 85)",
+          "oklch(60% 0.006 85)",
+          "oklch(75% 0.006 85)",
+          "oklch(85% 0.006 85)",
+          "oklch(95% 0.006 85)"
         ]
       },
-      "soft-sage": {
+      "paper-2": {
         "role": "neutral",
-        "displayName": "Soft Sage",
-        "canonical": "#f2f5f4",
-        "purpose": "Skill chips, plain badges, Let's talk panel, card image backing (--soft).",
+        "displayName": "Paper Raised",
+        "canonical": "oklch(99.4% 0.003 85)",
+        "purpose": "Professional panels, stage, nav pill, buttons (--color-paper-2).",
         "tonalRamp": [
-          "#212b28",
-          "#3a4b45",
-          "#526b62",
-          "#6a8a80",
-          "#89a49b",
-          "#a9bcb6",
-          "#cbd7d3",
-          "#f1f4f3"
+          "oklch(15% 0.003 85)",
+          "oklch(25% 0.003 85)",
+          "oklch(35% 0.003 85)",
+          "oklch(45% 0.003 85)",
+          "oklch(60% 0.003 85)",
+          "oklch(75% 0.003 85)",
+          "oklch(85% 0.003 85)",
+          "oklch(95% 0.003 85)"
+        ]
+      },
+      "paper-3": {
+        "role": "neutral",
+        "displayName": "Paper Deep",
+        "canonical": "oklch(94.5% 0.008 85)",
+        "purpose": "Professional deepest step: footer, image wells, hover fill (--color-paper-3).",
+        "tonalRamp": [
+          "oklch(15% 0.008 85)",
+          "oklch(25% 0.008 85)",
+          "oklch(35% 0.008 85)",
+          "oklch(45% 0.008 85)",
+          "oklch(60% 0.008 85)",
+          "oklch(75% 0.008 85)",
+          "oklch(85% 0.008 85)",
+          "oklch(95% 0.008 85)"
         ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Ink",
-        "canonical": "#0f1716",
-        "purpose": "Headings and main text (--ink).",
+        "canonical": "oklch(19% 0.01 60)",
+        "purpose": "Professional headings and main text (--color-ink).",
         "tonalRamp": [
-          "#1e2e2c",
-          "#34504d",
-          "#4a726d",
-          "#61948e",
-          "#80aca7",
-          "#a2c3bf",
-          "#c7dbd8",
-          "#f0f5f4"
+          "oklch(15% 0.01 60)",
+          "oklch(25% 0.01 60)",
+          "oklch(35% 0.01 60)",
+          "oklch(45% 0.01 60)",
+          "oklch(60% 0.01 60)",
+          "oklch(75% 0.01 60)",
+          "oklch(85% 0.01 60)",
+          "oklch(95% 0.01 60)"
         ]
       },
-      "ink-muted": {
+      "ink-2": {
         "role": "neutral",
-        "displayName": "Muted Ink",
-        "canonical": "#4a5654",
-        "purpose": "Secondary text, menu links and tabs at rest, dates, footer (--ink-2).",
+        "displayName": "Ink Two",
+        "canonical": "oklch(31% 0.01 60)",
+        "purpose": "Professional secondary text, organisation names, hover borders (--color-ink-2).",
         "tonalRamp": [
-          "#232928",
-          "#3d4746",
-          "#576563",
-          "#718481",
-          "#8f9e9c",
-          "#adb8b6",
-          "#ced5d3",
-          "#f1f3f3"
+          "oklch(15% 0.01 60)",
+          "oklch(25% 0.01 60)",
+          "oklch(35% 0.01 60)",
+          "oklch(45% 0.01 60)",
+          "oklch(60% 0.01 60)",
+          "oklch(75% 0.01 60)",
+          "oklch(85% 0.01 60)",
+          "oklch(95% 0.01 60)"
         ]
       },
-      "hairline": {
+      "muted": {
         "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "#e1e7e5",
-        "purpose": "All borders and dividers (--line).",
+        "displayName": "Muted",
+        "canonical": "oklch(44% 0.012 60)",
+        "purpose": "Professional body-secondary text, labels, nav links at rest (--color-muted).",
         "tonalRamp": [
-          "#222a28",
-          "#3b4a45",
-          "#546962",
-          "#6d887f",
-          "#8ba29a",
-          "#aabbb5",
-          "#ccd6d3",
-          "#f1f4f3"
+          "oklch(15% 0.012 60)",
+          "oklch(25% 0.012 60)",
+          "oklch(35% 0.012 60)",
+          "oklch(45% 0.012 60)",
+          "oklch(60% 0.012 60)",
+          "oklch(75% 0.012 60)",
+          "oklch(85% 0.012 60)",
+          "oklch(95% 0.012 60)"
         ]
       },
-      "teal": {
-        "role": "primary",
-        "displayName": "Deep Teal",
-        "canonical": "#0f766e",
-        "purpose": "The one Professional accent (--accent, --focus); scrollbar thumb.",
-        "tonalRamp": [
-          "#09443f",
-          "#0f766e",
-          "#15a79c",
-          "#1cd9ca",
-          "#45e7db",
-          "#77eee5",
-          "#aef5ef",
-          "#e8fcfb"
-        ]
-      },
-      "teal-hover": {
-        "role": "primary",
-        "displayName": "Deep Teal Hover",
-        "canonical": "#0c625b",
-        "purpose": "Primary button hover (--accent-hover).",
-        "tonalRamp": [
-          "#08443f",
-          "#0e766e",
-          "#15a89c",
-          "#1bdacb",
-          "#45e8db",
-          "#77eee5",
-          "#adf5ef",
-          "#e8fcfb"
-        ]
-      },
-      "teal-tint": {
-        "role": "primary",
-        "displayName": "Teal Tint",
-        "canonical": "#e3f2ef",
-        "purpose": "Tag chips; hovered and current menu link fill (--accent-soft).",
-        "tonalRamp": [
-          "#18342f",
-          "#2a5b51",
-          "#3c8173",
-          "#4ea795",
-          "#70bdad",
-          "#97cec3",
-          "#c0e2db",
-          "#eef7f5"
-        ]
-      },
-      "teal-text": {
-        "role": "primary",
-        "displayName": "Teal Text",
-        "canonical": "#0b5f58",
-        "purpose": "Teal text on the tint: tags, current menu link (--accent-text).",
-        "tonalRamp": [
-          "#084540",
-          "#0e776e",
-          "#14a99d",
-          "#19dbcb",
-          "#44e9db",
-          "#76efe5",
-          "#adf5ef",
-          "#e8fcfb"
-        ]
-      },
-      "creative-ground": {
+      "rule": {
         "role": "neutral",
-        "displayName": "Creative Ground",
-        "canonical": "#0a1211",
-        "purpose": "Creative page background (--bg).",
+        "displayName": "Rule",
+        "canonical": "oklch(88.5% 0.01 75)",
+        "purpose": "Professional every 1px hairline and the hero ruled-paper grid (--color-rule).",
         "tonalRamp": [
-          "#1b312e",
-          "#2f5551",
-          "#437973",
-          "#579d95",
-          "#79b4ad",
-          "#9dc8c3",
-          "#c4dedb",
-          "#eff6f5"
+          "oklch(15% 0.01 75)",
+          "oklch(25% 0.01 75)",
+          "oklch(35% 0.01 75)",
+          "oklch(45% 0.01 75)",
+          "oklch(60% 0.01 75)",
+          "oklch(75% 0.01 75)",
+          "oklch(85% 0.01 75)",
+          "oklch(95% 0.01 75)"
         ]
       },
-      "creative-surface": {
+      "rule-2": {
         "role": "neutral",
-        "displayName": "Creative Surface",
-        "canonical": "#111c1a",
-        "purpose": "Creative cards, rows, outline buttons, mode button (--surface).",
+        "displayName": "Rule Strong",
+        "canonical": "oklch(74% 0.012 75)",
+        "purpose": "Professional outlines, timeline spine, scrollbar thumb, ruler ticks (--color-rule-2).",
         "tonalRamp": [
-          "#1d302c",
-          "#32534d",
-          "#47756d",
-          "#5c988d",
-          "#7db0a7",
-          "#a0c5be",
-          "#c6dcd8",
-          "#eff5f4"
+          "oklch(15% 0.012 75)",
+          "oklch(25% 0.012 75)",
+          "oklch(35% 0.012 75)",
+          "oklch(45% 0.012 75)",
+          "oklch(60% 0.012 75)",
+          "oklch(75% 0.012 75)",
+          "oklch(85% 0.012 75)",
+          "oklch(95% 0.012 75)"
         ]
       },
-      "creative-soft": {
-        "role": "neutral",
-        "displayName": "Creative Soft",
-        "canonical": "#16231f",
-        "purpose": "Creative chips, badges, panel (--soft).",
-        "tonalRamp": [
-          "#1e2f2a",
-          "#335148",
-          "#497467",
-          "#5e9685",
-          "#7faea0",
-          "#a1c4b9",
-          "#c7dcd5",
-          "#eff5f3"
-        ]
-      },
-      "creative-ink": {
-        "role": "neutral",
-        "displayName": "Creative Ink",
-        "canonical": "#e9f2ef",
-        "purpose": "Creative main text (--ink).",
-        "tonalRamp": [
-          "#1c302a",
-          "#315348",
-          "#467766",
-          "#5b9a85",
-          "#7cb19f",
-          "#9fc6b9",
-          "#c5ddd5",
-          "#eff6f3"
-        ]
-      },
-      "creative-ink-muted": {
-        "role": "neutral",
-        "displayName": "Creative Muted Ink",
-        "canonical": "#a3b5b0",
-        "purpose": "Creative secondary text (--ink-2).",
-        "tonalRamp": [
-          "#222a28",
-          "#3b4945",
-          "#546963",
-          "#6d8880",
-          "#8ba29b",
-          "#aabbb6",
-          "#ccd6d3",
-          "#f1f4f3"
-        ]
-      },
-      "creative-hairline": {
-        "role": "neutral",
-        "displayName": "Creative Hairline",
-        "canonical": "#22332f",
-        "purpose": "Creative borders (--line).",
-        "tonalRamp": [
-          "#1f2e2a",
-          "#355049",
-          "#4b7168",
-          "#629387",
-          "#82aba2",
-          "#a3c2bb",
-          "#c8dad6",
-          "#f0f5f4"
-        ]
-      },
-      "bright-teal": {
+      "amber": {
         "role": "primary",
-        "displayName": "Bright Teal",
-        "canonical": "#2dd4bf",
-        "purpose": "The one Creative accent (--accent); back of the flipped photo.",
+        "displayName": "Amber",
+        "canonical": "oklch(52% 0.14 68)",
+        "purpose": "Professional person and main action: Email me, progress line, focus, current job border (--color-accent, --color-focus).",
         "tonalRamp": [
-          "#0d3f39",
-          "#176e63",
-          "#209d8d",
-          "#2acbb7",
-          "#51dbca",
-          "#80e5d8",
-          "#b3efe8",
-          "#eafbf9"
+          "oklch(15% 0.14 68)",
+          "oklch(25% 0.14 68)",
+          "oklch(35% 0.14 68)",
+          "oklch(45% 0.14 68)",
+          "oklch(60% 0.14 68)",
+          "oklch(75% 0.14 68)",
+          "oklch(85% 0.14 68)",
+          "oklch(95% 0.14 68)"
         ]
       },
-      "bright-teal-hover": {
+      "amber-hover": {
         "role": "primary",
-        "displayName": "Bright Teal Hover",
-        "canonical": "#5eead4",
-        "purpose": "Creative hover, focus and accent text (--accent-hover, --focus, --accent-text).",
+        "displayName": "Amber Hover",
+        "canonical": "oklch(46% 0.13 66)",
+        "purpose": "Professional primary button hover and scrollbar active (--color-accent-hover).",
         "tonalRamp": [
-          "#09443a",
-          "#0f7565",
-          "#16a790",
-          "#1cd9bb",
-          "#46e7ce",
-          "#78eddb",
-          "#aef4e9",
-          "#e8fcf9"
+          "oklch(15% 0.13 66)",
+          "oklch(25% 0.13 66)",
+          "oklch(35% 0.13 66)",
+          "oklch(45% 0.13 66)",
+          "oklch(60% 0.13 66)",
+          "oklch(75% 0.13 66)",
+          "oklch(85% 0.13 66)",
+          "oklch(95% 0.13 66)"
         ]
       },
-      "bright-teal-ink": {
+      "amber-soft": {
         "role": "primary",
-        "displayName": "Bright Teal Ink",
-        "canonical": "#062320",
-        "purpose": "Dark text on bright teal; eye pupils (--accent-ink).",
+        "displayName": "Amber Tint",
+        "canonical": "oklch(93% 0.045 80)",
+        "purpose": "Professional current menu item and Current chip fill (--color-accent-soft).",
         "tonalRamp": [
-          "#0b413c",
-          "#137167",
-          "#1ca193",
-          "#24d1bf",
-          "#4ce0d1",
-          "#7ce9dd",
-          "#b1f2eb",
-          "#e9fbf9"
+          "oklch(15% 0.045 80)",
+          "oklch(25% 0.045 80)",
+          "oklch(35% 0.045 80)",
+          "oklch(45% 0.045 80)",
+          "oklch(60% 0.045 80)",
+          "oklch(75% 0.045 80)",
+          "oklch(85% 0.045 80)",
+          "oklch(95% 0.045 80)"
         ]
       },
-      "bright-teal-tint": {
+      "amber-text": {
         "role": "primary",
-        "displayName": "Bright Teal Tint",
-        "canonical": "rgb(45 212 191 / 0.12)",
-        "purpose": "Creative tag chip and menu link fill (--accent-soft).",
+        "displayName": "Amber Text",
+        "canonical": "oklch(45% 0.12 66)",
+        "purpose": "Professional accent text on hover: links, mode button, footer links (--color-accent-text).",
         "tonalRamp": [
-          "#0d3f39",
-          "#176e63",
-          "#209d8d",
-          "#2acbb7",
-          "#51dbca",
-          "#80e5d8",
-          "#b3efe8",
-          "#eafbf9"
+          "oklch(15% 0.12 66)",
+          "oklch(25% 0.12 66)",
+          "oklch(35% 0.12 66)",
+          "oklch(45% 0.12 66)",
+          "oklch(60% 0.12 66)",
+          "oklch(75% 0.12 66)",
+          "oklch(85% 0.12 66)",
+          "oklch(95% 0.12 66)"
+        ]
+      },
+      "amber-ink": {
+        "role": "primary",
+        "displayName": "Amber Ink",
+        "canonical": "oklch(99% 0.006 85)",
+        "purpose": "Professional text on amber fill (--color-accent-ink).",
+        "tonalRamp": [
+          "oklch(15% 0.006 85)",
+          "oklch(25% 0.006 85)",
+          "oklch(35% 0.006 85)",
+          "oklch(45% 0.006 85)",
+          "oklch(60% 0.006 85)",
+          "oklch(75% 0.006 85)",
+          "oklch(85% 0.006 85)",
+          "oklch(95% 0.006 85)"
+        ]
+      },
+      "cool": {
+        "role": "secondary",
+        "displayName": "Measured Blue",
+        "canonical": "oklch(50% 0.14 250)",
+        "purpose": "Professional what a system measured: timeline dates (--color-cool). Never swapped with amber.",
+        "tonalRamp": [
+          "oklch(15% 0.14 250)",
+          "oklch(25% 0.14 250)",
+          "oklch(35% 0.14 250)",
+          "oklch(45% 0.14 250)",
+          "oklch(60% 0.14 250)",
+          "oklch(75% 0.14 250)",
+          "oklch(85% 0.14 250)",
+          "oklch(95% 0.14 250)"
+        ]
+      },
+      "cool-soft": {
+        "role": "secondary",
+        "displayName": "Measured Blue Tint",
+        "canonical": "oklch(94% 0.03 245)",
+        "purpose": "Professional soft cool fill (--color-cool-soft).",
+        "tonalRamp": [
+          "oklch(15% 0.03 245)",
+          "oklch(25% 0.03 245)",
+          "oklch(35% 0.03 245)",
+          "oklch(45% 0.03 245)",
+          "oklch(60% 0.03 245)",
+          "oklch(75% 0.03 245)",
+          "oklch(85% 0.03 245)",
+          "oklch(95% 0.03 245)"
+        ]
+      },
+      "ok": {
+        "role": "tertiary",
+        "displayName": "Copied Green",
+        "canonical": "oklch(52% 0.13 150)",
+        "purpose": "Professional the Copied state only (--color-ok).",
+        "tonalRamp": [
+          "oklch(15% 0.13 150)",
+          "oklch(25% 0.13 150)",
+          "oklch(35% 0.13 150)",
+          "oklch(45% 0.13 150)",
+          "oklch(60% 0.13 150)",
+          "oklch(75% 0.13 150)",
+          "oklch(85% 0.13 150)",
+          "oklch(95% 0.13 150)"
+        ]
+      },
+      "bad": {
+        "role": "tertiary",
+        "displayName": "Error Red",
+        "canonical": "oklch(52% 0.17 25)",
+        "purpose": "Professional error state token (--color-bad); defined, not shown in the page.",
+        "tonalRamp": [
+          "oklch(15% 0.17 25)",
+          "oklch(25% 0.17 25)",
+          "oklch(35% 0.17 25)",
+          "oklch(45% 0.17 25)",
+          "oklch(60% 0.17 25)",
+          "oklch(75% 0.17 25)",
+          "oklch(85% 0.17 25)",
+          "oklch(95% 0.17 25)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(17% 0.008 250)",
+        "purpose": "Creative page ground (--color-paper).",
+        "tonalRamp": [
+          "oklch(15% 0.008 250)",
+          "oklch(25% 0.008 250)",
+          "oklch(35% 0.008 250)",
+          "oklch(45% 0.008 250)",
+          "oklch(60% 0.008 250)",
+          "oklch(75% 0.008 250)",
+          "oklch(85% 0.008 250)",
+          "oklch(95% 0.008 250)"
+        ]
+      },
+      "graphite-2": {
+        "role": "neutral",
+        "displayName": "Graphite Raised",
+        "canonical": "oklch(21% 0.009 250)",
+        "purpose": "Creative panels, nav pill, buttons, work list (--color-paper-2).",
+        "tonalRamp": [
+          "oklch(15% 0.009 250)",
+          "oklch(25% 0.009 250)",
+          "oklch(35% 0.009 250)",
+          "oklch(45% 0.009 250)",
+          "oklch(60% 0.009 250)",
+          "oklch(75% 0.009 250)",
+          "oklch(85% 0.009 250)",
+          "oklch(95% 0.009 250)"
+        ]
+      },
+      "graphite-3": {
+        "role": "neutral",
+        "displayName": "Graphite Deep",
+        "canonical": "oklch(13.5% 0.007 250)",
+        "purpose": "Creative footer, image wells, hover fill (--color-paper-3).",
+        "tonalRamp": [
+          "oklch(15% 0.007 250)",
+          "oklch(25% 0.007 250)",
+          "oklch(35% 0.007 250)",
+          "oklch(45% 0.007 250)",
+          "oklch(60% 0.007 250)",
+          "oklch(75% 0.007 250)",
+          "oklch(85% 0.007 250)",
+          "oklch(95% 0.007 250)"
+        ]
+      },
+      "graphite-ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "oklch(95% 0.005 250)",
+        "purpose": "Creative headings and main text (--color-ink).",
+        "tonalRamp": [
+          "oklch(15% 0.005 250)",
+          "oklch(25% 0.005 250)",
+          "oklch(35% 0.005 250)",
+          "oklch(45% 0.005 250)",
+          "oklch(60% 0.005 250)",
+          "oklch(75% 0.005 250)",
+          "oklch(85% 0.005 250)",
+          "oklch(95% 0.005 250)"
+        ]
+      },
+      "graphite-ink-2": {
+        "role": "neutral",
+        "displayName": "Graphite Ink Two",
+        "canonical": "oklch(83% 0.008 250)",
+        "purpose": "Creative secondary text (--color-ink-2).",
+        "tonalRamp": [
+          "oklch(15% 0.008 250)",
+          "oklch(25% 0.008 250)",
+          "oklch(35% 0.008 250)",
+          "oklch(45% 0.008 250)",
+          "oklch(60% 0.008 250)",
+          "oklch(75% 0.008 250)",
+          "oklch(85% 0.008 250)",
+          "oklch(95% 0.008 250)"
+        ]
+      },
+      "graphite-muted": {
+        "role": "neutral",
+        "displayName": "Graphite Muted",
+        "canonical": "oklch(71% 0.01 250)",
+        "purpose": "Creative labels and quiet text (--color-muted).",
+        "tonalRamp": [
+          "oklch(15% 0.01 250)",
+          "oklch(25% 0.01 250)",
+          "oklch(35% 0.01 250)",
+          "oklch(45% 0.01 250)",
+          "oklch(60% 0.01 250)",
+          "oklch(75% 0.01 250)",
+          "oklch(85% 0.01 250)",
+          "oklch(95% 0.01 250)"
+        ]
+      },
+      "graphite-rule": {
+        "role": "neutral",
+        "displayName": "Graphite Rule",
+        "canonical": "oklch(31% 0.01 250)",
+        "purpose": "Creative hairlines (--color-rule).",
+        "tonalRamp": [
+          "oklch(15% 0.01 250)",
+          "oklch(25% 0.01 250)",
+          "oklch(35% 0.01 250)",
+          "oklch(45% 0.01 250)",
+          "oklch(60% 0.01 250)",
+          "oklch(75% 0.01 250)",
+          "oklch(85% 0.01 250)",
+          "oklch(95% 0.01 250)"
+        ]
+      },
+      "graphite-rule-2": {
+        "role": "neutral",
+        "displayName": "Graphite Rule Strong",
+        "canonical": "oklch(42% 0.012 250)",
+        "purpose": "Creative outlines, spine, scrollbar thumb (--color-rule-2).",
+        "tonalRamp": [
+          "oklch(15% 0.012 250)",
+          "oklch(25% 0.012 250)",
+          "oklch(35% 0.012 250)",
+          "oklch(45% 0.012 250)",
+          "oklch(60% 0.012 250)",
+          "oklch(75% 0.012 250)",
+          "oklch(85% 0.012 250)",
+          "oklch(95% 0.012 250)"
+        ]
+      },
+      "amber-lit": {
+        "role": "primary",
+        "displayName": "Amber Lit",
+        "canonical": "oklch(82% 0.15 80)",
+        "purpose": "Creative person and main action; progress line, focus, avatar disc, pupils' ring (--color-accent).",
+        "tonalRamp": [
+          "oklch(15% 0.15 80)",
+          "oklch(25% 0.15 80)",
+          "oklch(35% 0.15 80)",
+          "oklch(45% 0.15 80)",
+          "oklch(60% 0.15 80)",
+          "oklch(75% 0.15 80)",
+          "oklch(85% 0.15 80)",
+          "oklch(95% 0.15 80)"
+        ]
+      },
+      "amber-lit-hover": {
+        "role": "primary",
+        "displayName": "Amber Lit Hover",
+        "canonical": "oklch(87% 0.13 82)",
+        "purpose": "Creative primary hover (--color-accent-hover).",
+        "tonalRamp": [
+          "oklch(15% 0.13 82)",
+          "oklch(25% 0.13 82)",
+          "oklch(35% 0.13 82)",
+          "oklch(45% 0.13 82)",
+          "oklch(60% 0.13 82)",
+          "oklch(75% 0.13 82)",
+          "oklch(85% 0.13 82)",
+          "oklch(95% 0.13 82)"
+        ]
+      },
+      "amber-lit-soft": {
+        "role": "primary",
+        "displayName": "Amber Lit Tint",
+        "canonical": "oklch(29% 0.05 80)",
+        "purpose": "Creative current menu item and Current chip fill (--color-accent-soft).",
+        "tonalRamp": [
+          "oklch(15% 0.05 80)",
+          "oklch(25% 0.05 80)",
+          "oklch(35% 0.05 80)",
+          "oklch(45% 0.05 80)",
+          "oklch(60% 0.05 80)",
+          "oklch(75% 0.05 80)",
+          "oklch(85% 0.05 80)",
+          "oklch(95% 0.05 80)"
+        ]
+      },
+      "amber-lit-text": {
+        "role": "primary",
+        "displayName": "Amber Lit Text",
+        "canonical": "oklch(84% 0.14 80)",
+        "purpose": "Creative accent text on hover (--color-accent-text).",
+        "tonalRamp": [
+          "oklch(15% 0.14 80)",
+          "oklch(25% 0.14 80)",
+          "oklch(35% 0.14 80)",
+          "oklch(45% 0.14 80)",
+          "oklch(60% 0.14 80)",
+          "oklch(75% 0.14 80)",
+          "oklch(85% 0.14 80)",
+          "oklch(95% 0.14 80)"
+        ]
+      },
+      "amber-lit-ink": {
+        "role": "primary",
+        "displayName": "Amber Lit Ink",
+        "canonical": "oklch(18% 0.04 75)",
+        "purpose": "Creative text on amber fill (--color-accent-ink).",
+        "tonalRamp": [
+          "oklch(15% 0.04 75)",
+          "oklch(25% 0.04 75)",
+          "oklch(35% 0.04 75)",
+          "oklch(45% 0.04 75)",
+          "oklch(60% 0.04 75)",
+          "oklch(75% 0.04 75)",
+          "oklch(85% 0.04 75)",
+          "oklch(95% 0.04 75)"
+        ]
+      },
+      "cool-lit": {
+        "role": "secondary",
+        "displayName": "Measured Blue Lit",
+        "canonical": "oklch(77% 0.12 245)",
+        "purpose": "Creative timeline dates (--color-cool).",
+        "tonalRamp": [
+          "oklch(15% 0.12 245)",
+          "oklch(25% 0.12 245)",
+          "oklch(35% 0.12 245)",
+          "oklch(45% 0.12 245)",
+          "oklch(60% 0.12 245)",
+          "oklch(75% 0.12 245)",
+          "oklch(85% 0.12 245)",
+          "oklch(95% 0.12 245)"
+        ]
+      },
+      "cool-lit-soft": {
+        "role": "secondary",
+        "displayName": "Measured Blue Lit Tint",
+        "canonical": "oklch(29% 0.05 245)",
+        "purpose": "Creative soft cool fill (--color-cool-soft).",
+        "tonalRamp": [
+          "oklch(15% 0.05 245)",
+          "oklch(25% 0.05 245)",
+          "oklch(35% 0.05 245)",
+          "oklch(45% 0.05 245)",
+          "oklch(60% 0.05 245)",
+          "oklch(75% 0.05 245)",
+          "oklch(85% 0.05 245)",
+          "oklch(95% 0.05 245)"
+        ]
+      },
+      "ok-lit": {
+        "role": "tertiary",
+        "displayName": "Copied Green Lit",
+        "canonical": "oklch(76% 0.15 150)",
+        "purpose": "Creative Copied state (--color-ok).",
+        "tonalRamp": [
+          "oklch(15% 0.15 150)",
+          "oklch(25% 0.15 150)",
+          "oklch(35% 0.15 150)",
+          "oklch(45% 0.15 150)",
+          "oklch(60% 0.15 150)",
+          "oklch(75% 0.15 150)",
+          "oklch(85% 0.15 150)",
+          "oklch(95% 0.15 150)"
+        ]
+      },
+      "bad-lit": {
+        "role": "tertiary",
+        "displayName": "Error Red Lit",
+        "canonical": "oklch(70% 0.17 25)",
+        "purpose": "Creative error token (--color-bad).",
+        "tonalRamp": [
+          "oklch(15% 0.17 25)",
+          "oklch(25% 0.17 25)",
+          "oklch(35% 0.17 25)",
+          "oklch(45% 0.17 25)",
+          "oklch(60% 0.17 25)",
+          "oklch(75% 0.17 25)",
+          "oklch(85% 0.17 25)",
+          "oklch(95% 0.17 25)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "The name in the intro and the 404 heading. Once per page."
+        "purpose": "Hero h1 only: Host Grotesk 500, --text-display clamp(2.75rem, 5vw + 1rem, 5.25rem), tracking -0.03em, line-height 1.05, max 8ch in hero."
       },
-      "headline": {
-        "displayName": "Headline",
-        "purpose": "Section titles; Let's talk goes up to 2.5rem."
+      "display-small": {
+        "displayName": "Display Small",
+        "purpose": "--text-display-s clamp(2.25rem, 4vw + 0.5rem, 3.75rem); the 404 and compact display uses."
       },
-      "pitch": {
-        "displayName": "Pitch",
-        "purpose": "The one sentence under the name, max 30ch, balanced."
+      "section": {
+        "displayName": "Section",
+        "purpose": "h2 section titles: 500, --text-section clamp(2rem, 2.5vw + 1rem, 3.5rem), max 30ch, balanced."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Project card titles; skill group titles at 1.0625rem."
+        "purpose": "h3 and work-row titles: --text-title clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem), line-height 1.2; row titles 600; trail and index h3 at --text-lg 1.25rem."
       },
-      "title-small": {
-        "displayName": "Title Small",
-        "purpose": "Experience and Education row titles."
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "One-sentence pitch and Let's talk line: --text-lead clamp(1.125rem, 0.35vw + 1rem, 1.375rem), line-height 1.45, max 52ch (28ch in hero)."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "All running text."
-      },
-      "body-small": {
-        "displayName": "Body Small",
-        "purpose": "Card descriptions in muted ink."
-      },
-      "body-large": {
-        "displayName": "Body Large",
-        "purpose": "1.125rem: 404 explanation (400), email address (700), menu name (800)."
-      },
-      "nav": {
-        "displayName": "Nav",
-        "purpose": "Phone tabs, small buttons, footer text."
-      },
-      "chip": {
-        "displayName": "Chip",
-        "purpose": "Skill chips."
-      },
-      "label-large": {
-        "displayName": "Label Large",
-        "purpose": "Copy button."
+        "purpose": "Host Grotesk 400 (350 in Creative), 1rem, line-height 1.55, paragraphs max 65ch."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Tag chips and badges. Sentence case."
+        "purpose": "Buttons, nav links, chips, picker tabs, footer titles: body face at 0.875rem (chips 0.8125rem), weight 500, sentence case, no tracking, never all-caps."
+      },
+      "reading": {
+        "displayName": "Reading",
+        "purpose": "System-written text only, Atkinson Hyperlegible Mono 400: the Let's talk email at clamp(1.25rem, 7.4vw, 4.25rem), tracking -0.04em, tabular slashed-zero; timeline dates and footer year at 0.875rem."
       }
     },
-    "shadows": [
-      {
-        "name": "lift",
-        "value": "0 1px 2px rgb(15 23 22 / 0.05), 0 8px 24px rgb(15 23 22 / 0.06)",
-        "purpose": "Project cards and the mode button, Professional (--shadow)."
-      },
-      {
-        "name": "lift-creative",
-        "value": "0 1px 2px rgb(0 0 0 / 0.4), 0 10px 30px rgb(0 0 0 / 0.35)",
-        "purpose": "Project cards and the mode button, Creative (--shadow)."
-      },
-      {
-        "name": "photo-ring",
-        "value": "0 0 0 4px var(--surface), 0 0 0 7px var(--accent)",
-        "purpose": "Gap then 3px accent ring around the intro photo."
-      },
-      {
-        "name": "current-underline",
-        "value": "inset 0 -2px 0 var(--accent)",
-        "purpose": "Current menu link underline (not elevation)."
-      },
-      {
-        "name": "eyes-pill",
-        "value": "0 4px 14px rgb(0 0 0 / 0.35)",
-        "purpose": "Creative following-eyes pill only."
-      }
-    ],
+    "shadows": [],
     "motion": [
       {
-        "name": "state-fade",
-        "value": "160ms",
-        "purpose": "Button, mode button and link colour/border changes."
+        "name": "dur-micro",
+        "value": "120ms",
+        "purpose": "Shortest token (--dur-micro); defined, little used."
+      },
+      {
+        "name": "dur-short",
+        "value": "220ms",
+        "purpose": "Every colour, border, background and arrow transition (--dur-short)."
+      },
+      {
+        "name": "dur-long",
+        "value": "420ms",
+        "purpose": "Longest token (--dur-long)."
       },
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Mode cross-fade (--ease-out)."
+        "purpose": "Default easing for state transitions (--ease-out)."
       },
       {
-        "name": "mode-crossfade",
-        "value": "320ms",
-        "purpose": "View transition when switching modes; skipped with reduced motion."
+        "name": "ease-in",
+        "value": "cubic-bezier(0.7, 0, 0.84, 0)",
+        "purpose": "--ease-in."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "--ease-in-out."
+      },
+      {
+        "name": "mode-rise",
+        "value": "0.7s cubic-bezier(0.22, 1, 0.36, 1), stagger 70ms, translateY(1.25rem) to none",
+        "purpose": "The one authored moment: on mode switch everything on screen rises in (hero-rise, set by mode.js). Off under reduced motion."
       },
       {
         "name": "photo-flip",
         "value": "700ms cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "Creative intro photo turning to the 3D avatar; instant with reduced motion."
+        "purpose": "Creative portrait turns to the 3D avatar (hover, tap on phones)."
       },
       {
         "name": "pupil-follow",
         "value": "90ms linear",
-        "purpose": "Creative eyes following the cursor; off with reduced motion."
+        "purpose": "Creative eyes follow the cursor on the gaze-tracking thumbnail."
       },
       {
-        "name": "copied-reset",
-        "value": "2400ms",
-        "purpose": "How long Copy shows \"Copied\"."
+        "name": "backdrop-in",
+        "value": "0.9s ease-out",
+        "purpose": "Creative skyline canvas fades in after the switch."
+      },
+      {
+        "name": "progress-line",
+        "value": "scaleX(var(--progress)), no transition",
+        "purpose": "3px amber line at the window top, driven by progress.js from scroll position."
       }
     ],
     "breakpoints": [
       {
         "name": "tablet",
-        "value": "56rem",
-        "purpose": "Below: menu links become phone tabs, cards and skills stack, rows reflow, photo 6.5rem."
+        "value": "60rem",
+        "purpose": "Nav links become a second tab pill; hero, record and skills stack; index rows single column; gutter 24px."
+      },
+      {
+        "name": "phone",
+        "value": "40rem",
+        "purpose": "Gutter 16px, column gap 16px, smaller section gaps."
       },
       {
         "name": "small-phone",
         "value": "26rem",
-        "purpose": "Below: menu name 1rem."
+        "purpose": "Nav name drops to 0.875rem."
       }
     ]
   },
@@ -436,127 +664,140 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Email me. The one solid teal action, always with an icon.",
-      "html": "<div class=\"ds-root\"><a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10\"/><path d=\"M3 7l9 6l9 -6\"/></svg>Email me</a></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;} .ds-btn{font-family:'Onest Variable','Onest',system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.875rem;padding:0 1.25rem;border:1.5px solid transparent;border-radius:0.75rem;font-size:1.03125rem;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 160ms,border-color 160ms,color 160ms;} .ds-btn svg{width:1.15em;height:1.15em;} .ds-btn-primary{background:var(--accent);color:var(--accent-ink);} .ds-btn-primary:hover{background:var(--accent-hover);} .ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px;}"
+      "description": "Email me. The one amber fill for the main action, icon plus label, 48px tall, 6px corners.",
+      "html": "<div class=\"ds-root\"><a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7\"/><path d=\"M3 7l9 6l9-6\"/></svg>Email me</a></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}"
     },
     {
       "name": "Outline Button",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Download CV, GitHub, LinkedIn, WhatsApp, View code. Surface fill, hairline border.",
-      "html": "<div class=\"ds-root\"><a class=\"ds-btn ds-btn-outline\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2\"/><path d=\"M7 11l5 5l5 -5\"/><path d=\"M12 4l0 12\"/></svg>Download CV</a></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;} .ds-btn{font-family:'Onest Variable','Onest',system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.875rem;padding:0 1.25rem;border:1.5px solid transparent;border-radius:0.75rem;font-size:1.03125rem;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 160ms,border-color 160ms,color 160ms;} .ds-btn svg{width:1.15em;height:1.15em;} .ds-btn-outline{border-color:var(--line);background:var(--surface);color:var(--ink);} .ds-btn-outline:hover{border-color:var(--ink-2);} .ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px;}"
+      "description": "Download CV, GitHub, LinkedIn, View code. Paper-2 fill, strong hairline, deepens on hover.",
+      "html": "<div class=\"ds-root\"><a class=\"ds-btn\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2\"/><path d=\"M7 11l5 5l5-5\"/><path d=\"M12 4v12\"/></svg>Download CV</a></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}"
     },
     {
-      "name": "Sticky Menu",
+      "name": "Floating Nav Pill",
       "kind": "nav",
-      "refersTo": "menu-link",
-      "description": "Name, four section links (current one: tint fill, inset teal underline, teal text, same weight), small Email me.",
-      "html": "<div class=\"ds-root\"><header class=\"ds-nav\"><a class=\"ds-nav-name\" href=\"#\">Keshab Poudel</a><nav class=\"ds-nav-links\"><a href=\"#\" aria-current=\"true\">Projects</a><a href=\"#\">Experience</a><a href=\"#\">Skills</a><a href=\"#\">Contact</a></nav><a class=\"ds-btn ds-btn-primary ds-btn-small\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10\"/><path d=\"M3 7l9 6l9 -6\"/></svg>Email me</a></header></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;} .ds-nav{display:flex;align-items:center;gap:1rem;min-height:4.125rem;padding:0 1rem;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);color:var(--ink);} .ds-nav-name{margin-right:auto;font-size:1.125rem;font-weight:800;letter-spacing:-0.01em;text-decoration:none;color:inherit;white-space:nowrap;} .ds-nav-links{display:flex;gap:0.25rem;} .ds-nav-links a{padding:0.5rem 0.75rem;border-radius:0.5rem;color:var(--ink-2);font-weight:600;text-decoration:none;} .ds-nav-links a:hover{background:var(--accent-soft);color:var(--ink);} .ds-nav-links a[aria-current=true]{background:var(--accent-soft);box-shadow:inset 0 -2px 0 var(--accent);color:var(--accent-text);} .ds-nav-links a:focus-visible,.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px;} .ds-btn{font-family:'Onest Variable','Onest',system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.875rem;padding:0 1.25rem;border:1.5px solid transparent;border-radius:0.75rem;font-size:1.03125rem;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 160ms,border-color 160ms,color 160ms;} .ds-btn svg{width:1.15em;height:1.15em;} .ds-btn-primary{background:var(--accent);color:var(--accent-ink);} .ds-btn-primary:hover{background:var(--accent-hover);} .ds-btn-small{min-height:2.5rem;padding:0 0.875rem;font-size:0.9375rem;}"
+      "refersTo": "nav-pill",
+      "description": "Fixed pill, 1px rule, 10px+2 corners, 92% paper-2 over a 12px blur: name, four links (current one on amber tint), small Email me. Below 60rem the links move to a second pill of tabs.",
+      "html": "<div class=\"ds-root\"><header class=\"ds-nav\"><a class=\"ds-nav-name\" href=\"#\">Keshab Poudel</a><nav class=\"ds-nav-links\"><a href=\"#\" aria-current=\"true\">Projects</a><a href=\"#\">Experience</a><a href=\"#\">Skills</a><a href=\"#\">Contact</a></nav><a class=\"ds-btn ds-btn-primary ds-btn-small\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7\"/><path d=\"M3 7l9 6l9-6\"/></svg>Email me</a></header></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-nav{display:flex;align-items:center;gap:24px;padding:8px 8px 8px 24px;border:1px solid var(--color-rule);border-radius:12px;background:color-mix(in oklab,var(--color-paper-2) 92%,transparent);backdrop-filter:blur(12px)}.ds-nav-name{margin-right:auto;font-weight:500;letter-spacing:-0.01em;text-decoration:none;white-space:nowrap;color:inherit}.ds-nav-links{display:flex;gap:4px}.ds-nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:6px;color:var(--color-muted);font-size:0.875rem;font-weight:500;text-decoration:none;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-nav-links a:hover{background:var(--color-paper-3);color:var(--color-ink)}.ds-nav-links a[aria-current]{background:var(--color-accent-soft);color:var(--color-ink)}"
     },
     {
-      "name": "Phone Section Tabs",
-      "kind": "nav",
-      "refersTo": "phone-tab",
-      "description": "Below 56rem: plain text tabs under the menu bar; a teal underline marks the section in view.",
-      "html": "<div class=\"ds-root\"><nav class=\"ds-tabs\"><a href=\"#\">Projects</a><a href=\"#\" aria-current=\"true\">Experience</a><a href=\"#\">Skills</a><a href=\"#\">Contact</a></nav></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;} .ds-tabs{display:flex;gap:1.5rem;overflow-x:auto;padding:0 1rem;border-bottom:1px solid var(--line);scrollbar-width:none;} .ds-tabs a{flex:none;margin-bottom:-1px;padding:0.5rem 0 0.625rem;border-bottom:2px solid transparent;color:var(--ink-2);font-size:0.9375rem;font-weight:600;text-decoration:none;} .ds-tabs a[aria-current=true]{border-bottom-color:var(--accent);color:var(--ink);} .ds-tabs a:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px;}"
+      "name": "Hero Stage",
+      "kind": "card",
+      "refersTo": "stage",
+      "description": "Professional hero: one 2:1 screenshot cropped top-left on a deep paper well, radio-tab picker beneath (4px-corner labels). Capped at 50rem.",
+      "html": "<div class=\"ds-root\"><div class=\"ds-stage\"><div class=\"ds-stage-media\"><div class=\"ds-stage-shot\"></div></div><div class=\"ds-picker\"><span class=\"ds-tab ds-tab-on\">Gaze tracking</span><span class=\"ds-tab\">Dashboard</span><span class=\"ds-tab\">Workflow</span></div></div></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-stage{max-width:50rem;border:1px solid var(--color-rule);border-radius:10px;background:var(--color-paper-2);overflow:hidden}.ds-stage-media{border-bottom:1px solid var(--color-rule);background:var(--color-paper-3)}.ds-stage-shot{aspect-ratio:2/1;background:var(--color-paper-3)}.ds-picker{display:flex;flex-wrap:wrap;gap:8px;padding:16px 24px 24px}.ds-tab{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--color-rule);border-radius:4px;color:var(--color-muted);font-size:0.875rem;font-weight:500;cursor:pointer;transition:border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-tab:hover{border-color:var(--color-rule-2);color:var(--color-ink)}.ds-tab-on{border-color:var(--color-cool);color:var(--color-ink)}"
+    },
+    {
+      "name": "Selected Projects List",
+      "kind": "card",
+      "refersTo": "work-list",
+      "description": "Creative hero: compact index, no images. Title 600, stack in muted, arrow that nudges 4px right on hover.",
+      "html": "<div class=\"ds-root\"><div class=\"ds-work\"><p class=\"ds-work-head\">Selected projects</p><ul><li><a class=\"ds-work-row\" href=\"#\"><span class=\"ds-work-title\">Gaze tracking system</span><span class=\"ds-work-tags\">Python, Django, React</span><span class=\"ds-work-arrow\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M13 6l6 6l-6 6\"/></svg></span></a></li><li><a class=\"ds-work-row\" href=\"#\"><span class=\"ds-work-title\">Support agent RAG</span><span class=\"ds-work-tags\">n8n, PostgreSQL</span><span class=\"ds-work-arrow\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M13 6l6 6l-6 6\"/></svg></span></a></li></ul></div></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-work{max-width:32rem;border:1px solid var(--color-rule);border-radius:10px;background:var(--color-paper-2);overflow:hidden}.ds-work-head{margin:0;padding:16px 24px;border-bottom:1px solid var(--color-rule);color:var(--color-muted);font-size:0.875rem;font-weight:500}.ds-work ul{margin:0;padding:0;list-style:none}.ds-work li+li{border-top:1px solid var(--color-rule)}.ds-work-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;align-items:center;min-height:44px;padding:24px;color:inherit;text-decoration:none;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-work-row:hover{background:var(--color-paper-3)}.ds-work-title{font-size:1.25rem;font-weight:600;line-height:1.2}.ds-work-tags{grid-column:1;color:var(--color-muted);font-size:0.875rem}.ds-work-arrow{grid-column:2;grid-row:1/span 2;color:var(--color-muted);transition:transform 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-work-row:hover .ds-work-arrow{color:var(--color-ink);transform:translateX(4px)}"
+    },
+    {
+      "name": "Project Index Row",
+      "kind": "card",
+      "refersTo": "index-row",
+      "description": "Projects section: rows cut from one surface by 1px seams (grid gap over a rule background), 10px outer corners; thumb 2:1 with 6px corners.",
+      "html": "<div class=\"ds-root\"><ul class=\"ds-index\"><li class=\"ds-index-row\"><div class=\"ds-thumb\"></div><div><h3>Gaze tracking system</h3><p class=\"ds-summary\">Final-year project that tracks where a person looks on screen.</p></div><span class=\"ds-built\">Built with Python</span><a class=\"ds-btn ds-btn-small\" href=\"#\">View code</a></li></ul></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-index{display:grid;gap:1px;margin:0;padding:0;list-style:none;border:1px solid var(--color-rule);border-radius:10px;background:var(--color-rule);overflow:hidden}.ds-index-row{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr) minmax(0,2fr) auto;align-items:start;gap:24px;padding:24px;background:var(--color-paper-2)}.ds-thumb{aspect-ratio:2/1;border:1px solid var(--color-rule);border-radius:6px;background:var(--color-paper-3)}.ds-index-row h3{margin:0;font-size:1.25rem;font-weight:500;letter-spacing:-0.03em;line-height:1.2}.ds-summary{margin:8px 0 0;color:var(--color-muted)}.ds-built{color:var(--color-ink-2);font-size:0.875rem;font-weight:500}"
+    },
+    {
+      "name": "Timeline Row",
+      "kind": "custom",
+      "refersTo": "trail-row",
+      "description": "Experience and Education: 1px strong-rule spine, 9px ring dot, date in measured-blue mono, title, org, muted text; Current chip on amber tint with amber border.",
+      "html": "<div class=\"ds-root\"><ol class=\"ds-trail\"><li class=\"ds-trail-row\"><span class=\"ds-when\">Aug 2025 - now</span><div class=\"ds-trail-body\"><h3>Full-stack Developer</h3><p class=\"ds-org\">Upveda Technology</p><p class=\"ds-desc\">Built the RAG system in n8n for an enterprise AI support agent.</p></div><span class=\"ds-chip ds-chip-now\">Current</span></li></ol></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-trail{margin:0;padding:0;list-style:none;border-left:1px solid var(--color-rule-2)}.ds-trail-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;padding:0 0 40px 24px}.ds-trail-row::before{content:\"\";position:absolute;top:0.45em;left:-5px;width:9px;height:9px;border:1px solid var(--color-rule-2);border-radius:50%;background:var(--color-paper)}.ds-when{grid-column:1;color:var(--color-cool);font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;font-size:0.875rem;font-variant-numeric:tabular-nums slashed-zero}.ds-trail-body{grid-column:1/-1;display:grid;gap:4px}.ds-trail-body h3{margin:0;font-size:1.25rem;font-weight:500;letter-spacing:-0.03em;line-height:1.2}.ds-org{margin:0;color:var(--color-ink-2);font-weight:500}.ds-desc{margin:4px 0 0;color:var(--color-muted)}.ds-chip{grid-column:2;grid-row:1;align-self:start;padding:2px 8px;border:1px solid var(--color-rule-2);border-radius:4px;color:var(--color-muted);font-size:0.8125rem;font-weight:500}.ds-chip-now{border-color:var(--color-accent);background:var(--color-accent-soft);color:var(--color-ink)}"
+    },
+    {
+      "name": "Skills Panels",
+      "kind": "card",
+      "refersTo": "skill-group",
+      "description": "Three panels from one surface, split by 1px seams; heading at 1.25rem 500, list in ink-2, no chips.",
+      "html": "<div class=\"ds-root\"><div class=\"ds-skills\"><div class=\"ds-skill\"><h3>Backend</h3><ul><li>Python</li><li>Django</li><li>PostgreSQL</li></ul></div><div class=\"ds-skill\"><h3>Frontend</h3><ul><li>React</li><li>Astro</li><li>CSS</li></ul></div></div></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid var(--color-rule);border-radius:10px;background:var(--color-rule);overflow:hidden}.ds-skill{display:grid;align-content:start;gap:16px;padding:24px;background:var(--color-paper-2)}.ds-skill h3{margin:0;font-size:1.25rem;font-weight:500;letter-spacing:-0.03em;line-height:1.2}.ds-skill ul{display:grid;gap:8px;margin:0;padding:0;list-style:none;color:var(--color-ink-2)}"
+    },
+    {
+      "name": "Email Reading",
+      "kind": "custom",
+      "refersTo": "contact-reading",
+      "description": "Let's talk signature: the address set large in Atkinson Hyperlegible Mono with a Copy button beside it; hover turns the text amber-text, Copied turns the button green.",
+      "html": "<div class=\"ds-root\"><p class=\"ds-email\"><a class=\"ds-reading\" href=\"#\">ksavpoudel2@gmail.com</a><button class=\"ds-copy\" type=\"button\">Copy</button></p></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-email{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin:0}.ds-reading{color:var(--color-ink);font-family:\"Atkinson Hyperlegible Mono\",ui-monospace,monospace;font-size:clamp(1.25rem,5vw,2.5rem);letter-spacing:-0.04em;line-height:1.05;font-variant-numeric:tabular-nums slashed-zero;text-decoration-color:var(--color-rule-2);text-decoration-thickness:2px;text-underline-offset:0.18em;transition:color 220ms cubic-bezier(0.16,1,0.3,1),text-decoration-color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-reading:hover{color:var(--color-accent-text);text-decoration-color:currentColor}.ds-copy{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-size:0.875rem;font-weight:500;cursor:pointer;transition:border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-copy:hover{border-color:var(--color-ink-2)}.ds-copy:active{background:var(--color-paper-3)}"
     },
     {
       "name": "Mode Button",
       "kind": "button",
       "refersTo": "mode-button",
-      "description": "Floating round Creative switch, bottom right. Moon in Professional, sun in Creative.",
-      "html": "<div class=\"ds-root\"><button class=\"ds-fab\" type=\"button\" aria-pressed=\"false\" aria-label=\"Creative mode\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008\"/></svg></button></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;padding:1rem;} .ds-fab{display:grid;place-items:center;width:3rem;height:3rem;padding:0;border:1.5px solid var(--line);border-radius:50%;background:var(--surface);box-shadow:var(--shadow);color:var(--ink);cursor:pointer;transition:border-color 160ms,color 160ms,background-color 160ms;} .ds-fab svg{width:1.375rem;height:1.375rem;} .ds-fab:hover{border-color:var(--accent);color:var(--accent-text);} .ds-fab:focus-visible{outline:2px solid var(--focus);outline-offset:3px;}"
-    },
-    {
-      "name": "Project Card",
-      "kind": "card",
-      "refersTo": "project-card",
-      "description": "2:1 screenshot cropped from the top left, title, muted summary, teal tag chips, small View code button.",
-      "html": "<div class=\"ds-root\"><article class=\"ds-card\"><div class=\"ds-card-media\"><div class=\"ds-card-shot\"></div></div><div class=\"ds-card-body\"><h3>Real-time gaze tracking system</h3><p>Final-year project that tracks where a person looks on screen.</p><ul class=\"ds-tags\"><li>Python</li><li>Django</li><li>React</li></ul><a class=\"ds-btn ds-btn-outline ds-btn-small\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5\"/></svg>View code</a></div></article></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;color:var(--ink);max-width:22rem;} .ds-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:1.125rem;background:var(--surface);box-shadow:var(--shadow);} .ds-card-media{border-bottom:1px solid var(--line);background:var(--soft);} .ds-card-shot{aspect-ratio:2/1;background:linear-gradient(135deg,#1b2321,#0f1716);} .ds-card-body{display:flex;flex:1;flex-direction:column;gap:0.625rem;padding:1.125rem 1.125rem 1.25rem;} .ds-card h3{margin:0;font-size:1.1875rem;line-height:1.3;} .ds-card p{margin:0;color:var(--ink-2);font-size:0.96875rem;line-height:1.6;} .ds-tags{display:flex;flex-wrap:wrap;gap:0.375rem;margin:auto 0 0;padding:0;list-style:none;} .ds-tags li{padding:0.1875rem 0.625rem;border-radius:999px;background:var(--accent-soft);color:var(--accent-text);font-size:0.8125rem;font-weight:700;} .ds-btn{font-family:'Onest Variable','Onest',system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.875rem;padding:0 1.25rem;border:1.5px solid transparent;border-radius:0.75rem;font-size:1.03125rem;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 160ms,border-color 160ms,color 160ms;align-self:flex-start;} .ds-btn svg{width:1.15em;height:1.15em;} .ds-btn-outline{border-color:var(--line);background:var(--surface);color:var(--ink);} .ds-btn-outline:hover{border-color:var(--ink-2);} .ds-btn-small{min-height:2.5rem;padding:0 0.875rem;font-size:0.9375rem;} .ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px;}"
-    },
-    {
-      "name": "Experience Row",
-      "kind": "custom",
-      "refersTo": "row",
-      "description": "Date, title / company / text, badge. Current job gets the solid teal badge; Education rows drop the badge.",
-      "html": "<div class=\"ds-root\"><ol class=\"ds-rows\"><li class=\"ds-row\"><span class=\"ds-when\">Aug 2025 – now</span><div><h3>Full-stack Developer</h3><p class=\"ds-org\">Upveda Technology</p><p>Built the RAG system in n8n for an enterprise AI support agent, as part of a team.</p></div><span class=\"ds-badge ds-badge-now\">Current</span></li><li class=\"ds-row\"><span class=\"ds-when\">Mar 2025 – Aug 2025</span><div><h3>Intern</h3><p class=\"ds-org\">Upveda Technology</p><p>Built and maintained Django REST Framework APIs and React interfaces.</p></div><span class=\"ds-badge\">Internship</span></li></ol></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;color:var(--ink);line-height:1.6;} .ds-rows{display:grid;gap:0.75rem;margin:0;padding:0;list-style:none;} .ds-row{display:grid;grid-template-columns:11.75rem minmax(0,1fr) auto;gap:1.25rem;align-items:baseline;padding:1.125rem 1.25rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface);} .ds-when{color:var(--ink-2);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;} .ds-row h3{margin:0;font-size:1.09375rem;line-height:1.35;} .ds-row p{margin:0.25rem 0 0;color:var(--ink-2);} .ds-row .ds-org{margin-top:0.125rem;font-weight:600;} .ds-badge{padding:0.1875rem 0.625rem;border-radius:999px;background:var(--soft);color:var(--ink-2);font-size:0.8125rem;font-weight:700;white-space:nowrap;} .ds-badge-now{background:var(--accent);color:var(--accent-ink);}"
-    },
-    {
-      "name": "Skill Group",
-      "kind": "chip",
-      "refersTo": "skill-chip",
-      "description": "Bordered group with a bold title and soft sage, non-clickable skill chips.",
-      "html": "<div class=\"ds-root\"><div class=\"ds-skill-group\"><h3>Backend</h3><ul><li>Python</li><li>Django</li><li>DRF</li><li>PostgreSQL</li></ul></div></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;color:var(--ink);max-width:22rem;} .ds-skill-group{padding:1.25rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface);} .ds-skill-group h3{margin:0 0 0.75rem;font-size:1.0625rem;} .ds-skill-group ul{display:flex;flex-wrap:wrap;gap:0.375rem;margin:0;padding:0;list-style:none;} .ds-skill-group li{padding:0.25rem 0.6875rem;border-radius:0.5rem;background:var(--soft);font-size:0.90625rem;font-weight:600;}"
-    },
-    {
-      "name": "Let's Talk Panel",
-      "kind": "custom",
-      "refersTo": "contact-panel",
-      "description": "Soft sage centred panel: title, one line, email with Copy, contact buttons, small extra social icons.",
-      "html": "<div class=\"ds-root\"><section class=\"ds-contact\"><h2>Let's talk</h2><p class=\"ds-line\">Email is the fastest way to reach me. Also open to freelance projects.</p><p class=\"ds-email\"><a href=\"#\">ksavpoudel2@gmail.com</a><button class=\"ds-copy\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667l0 -8.666\"/><path d=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\"/></svg>Copy</button></p><div class=\"ds-actions\"><a class=\"ds-btn ds-btn-primary\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10\"/><path d=\"M3 7l9 6l9 -6\"/></svg>Email me</a><a class=\"ds-btn ds-btn-outline\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2\"/><path d=\"M7 11l5 5l5 -5\"/><path d=\"M12 4l0 12\"/></svg>Download CV</a></div></section></div>",
-      "css": ".ds-root{--bg:#ffffff;--surface:#ffffff;--soft:#f2f5f4;--ink:#0f1716;--ink-2:#4a5654;--line:#e1e7e5;--accent:#0f766e;--accent-hover:#0c625b;--accent-ink:#ffffff;--accent-soft:#e3f2ef;--accent-text:#0b5f58;--focus:#0f766e;--shadow:0 1px 2px rgb(15 23 22 / 0.05),0 8px 24px rgb(15 23 22 / 0.06);font-family:'Onest Variable','Onest',system-ui,sans-serif;color:var(--ink);line-height:1.6;} .ds-contact{padding:2rem 1.25rem;border:1px solid var(--line);border-radius:1.5rem;background:var(--soft);text-align:center;} .ds-contact h2{margin:0;font-size:2rem;letter-spacing:-0.02em;line-height:1.1;} .ds-line{margin:0.625rem 0 0;color:var(--ink-2);} .ds-email{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem 0.75rem;margin:1rem 0 0;font-size:1.125rem;font-weight:700;} .ds-email a{color:inherit;text-underline-offset:0.2em;text-decoration-thickness:1px;} .ds-copy{font-family:'Onest Variable','Onest',system-ui,sans-serif;display:inline-flex;align-items:center;gap:0.375rem;min-height:2.25rem;padding:0 0.75rem;border:1.5px solid var(--line);border-radius:0.625rem;background:var(--surface);color:var(--ink);cursor:pointer;font-size:0.875rem;font-weight:700;} .ds-copy:hover{border-color:var(--ink-2);} .ds-copy:focus-visible,.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px;} .ds-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:0.625rem;margin-top:1.375rem;} .ds-btn{font-family:'Onest Variable','Onest',system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:2.875rem;padding:0 1.25rem;border:1.5px solid transparent;border-radius:0.75rem;font-size:1.03125rem;font-weight:700;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 160ms,border-color 160ms,color 160ms;} .ds-btn svg{width:1.15em;height:1.15em;} .ds-btn-primary{background:var(--accent);color:var(--accent-ink);} .ds-btn-primary:hover{background:var(--accent-hover);} .ds-btn-outline{border-color:var(--line);background:var(--surface);color:var(--ink);} .ds-btn-outline:hover{border-color:var(--ink-2);}"
+      "description": "Fixed bottom-right, 48px, 6px corners, hairline outline; moon in Professional, sun in Creative; hover turns border amber.",
+      "html": "<div class=\"ds-root\"><button class=\"ds-fab\" type=\"button\" aria-label=\"Creative mode\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a7.5 7.5 0 0 0 7.9 12.4A9 9 0 1 1 12 3\"/></svg></button></div>",
+      "css": ".ds-root{--color-paper:oklch(97.5% 0.006 85);--color-paper-2:oklch(99.4% 0.003 85);--color-paper-3:oklch(94.5% 0.008 85);--color-ink:oklch(19% 0.01 60);--color-ink-2:oklch(31% 0.01 60);--color-muted:oklch(44% 0.012 60);--color-rule:oklch(88.5% 0.01 75);--color-rule-2:oklch(74% 0.012 75);--color-accent:oklch(52% 0.14 68);--color-accent-ink:oklch(99% 0.006 85);--color-accent-hover:oklch(46% 0.13 66);--color-accent-soft:oklch(93% 0.045 80);--color-accent-text:oklch(45% 0.12 66);--color-focus:oklch(52% 0.14 68);--color-cool:oklch(50% 0.14 250);--color-ok:oklch(52% 0.13 150);font-family:\"Host Grotesk\",ui-sans-serif,system-ui,sans-serif;font-size:1rem;line-height:1.55;color:var(--color-ink);background:var(--color-paper);padding:16px;}.ds-root *{box-sizing:border-box}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);font:inherit;font-weight:500;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color 220ms cubic-bezier(0.16,1,0.3,1),border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:hover{border-color:var(--color-ink-2);background:var(--color-paper-3)}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible,.ds-root a:focus-visible,.ds-root button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px}.ds-btn svg{width:1.15em;height:1.15em;flex:none}.ds-btn-primary{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-accent-ink)}.ds-btn-primary:hover{border-color:var(--color-accent-hover);background:var(--color-accent-hover)}.ds-btn-small{min-height:44px;padding:0 16px;font-size:0.875rem}.ds-fab{display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid var(--color-rule-2);border-radius:6px;background:var(--color-paper-2);color:var(--color-ink);cursor:pointer;transition:border-color 220ms cubic-bezier(0.16,1,0.3,1),color 220ms cubic-bezier(0.16,1,0.3,1)}.ds-fab svg{width:1.375rem;height:1.375rem}.ds-fab:hover{border-color:var(--color-accent);color:var(--color-accent-text)}.ds-fab:active{background:var(--color-paper-3)}"
     }
   ],
   "narrative": {
-    "northStar": "The Open Front Desk",
-    "overview": "The page works like a well-run front desk: a friendly face in the middle, the important things laid out on the counter, and the way to reach him always within arm's reach. The first screen holds the round photo, the name, the role line, one sentence about what he builds and four buttons (Email me, Download CV, GitHub, LinkedIn). Projects starts straight after. A sticky menu keeps Email me one click away the whole time.\n\nEverything is plain and familiar on purpose: white page, near-black text, one teal colour, soft grey-green fills, thin borders and rounded corners, and one font (Onest) in heavy weights for headings. There are no unusual layouts to figure out. Boldness comes only from a few controlled teal touches: the main button, the ring around the photo, the menu's current section, tag chips, the \"Current\" badge.\n\nCreative mode is the same page, layout and words in near-black green with a bright teal. It is switched with a round moon/sun button floating in the bottom-right corner. It adds two small extras that load only after switching: eyes on the gaze-tracking project card that follow the cursor, and the intro photo flipping over to a 3D avatar.",
+    "northStar": "A well-kept engineering logbook",
+    "overview": "Console, in two colourways. Professional (default) is light paper; Creative (opt-in, data-mode=\"creative\") is dark graphite with a Kathmandu skyline canvas behind the hero. Same layout, same roles, different values. One page, index-first: hero, Projects, Experience beside Education, Skills, Let's talk, footer.\n\nAmber marks the person and the one main action. Cool blue marks what a system measured: dates and the selected screenshot tab. Host Grotesk carries everything a person reads; Atkinson Hyperlegible Mono carries only what a system writes. Depth is lightness and 1px rules; the page chrome has no shadows, glows or gradients.\n\nThe skyline (Three.js, src/scripts/skyline.js) is an illustration inside its own canvas and is not part of the token system. The Professional hero keeps a ruled-paper band (32px grid, tick ruler) the same height as Creative's skyline band, so switching modes never shifts the page.",
     "keyCharacteristics": [
-      "Centred intro: round photo with teal ring, big name, role line, pitch, four icon buttons.",
-      "Sticky top menu: name, four section links, Email me. On phones the links become a row of underlined text tabs under the bar.",
-      "One teal accent per mode; everything else is ink, grey and soft grey-green.",
-      "Soft rounded boxes (16 to 18px corners) with 1px hairline borders.",
-      "One font, Onest, weights 400 to 800.",
-      "Professional (light) is the default; Creative (dark) is the same layout plus two extras."
+      "Two colourways filling the same roles: paper (light, default) and graphite (dark, opt-in).",
+      "Amber for the person and main action; blue for measured facts; never swapped, no third signal colour.",
+      "Host Grotesk 400/500 for reading, headings 500 at -0.03em tracking; Atkinson Hyperlegible Mono only for system-written text.",
+      "Panels: 1px rule, paper-2 fill, 10px corners; 6px on controls, 4px on chips; adjacent panels are one surface split by 1px seams.",
+      "No shadows in page chrome; colour and border changes over 220ms, one authored entrance on mode switch.",
+      "Floating pill nav, 3px amber scroll progress line, themed thin scrollbar that warms to amber on hover."
     ],
     "rules": [
       {
-        "name": "The One Teal Rule",
-        "body": "Each mode has exactly one accent colour. Teal marks what matters (the main action, where you are, the current job, the tools); everything else stays ink, grey or grey-green.",
+        "name": "The Two Signals Rule",
+        "body": "Amber is the person and the one main action (Email me, the current job, the current menu item, focus). Cool blue is what a system measured (dates, the selected screenshot tab). Never swap them, never add a third signal colour.",
         "section": "colors"
       },
       {
         "name": "The Same Roles Rule",
-        "body": "Components only use the shared roles. Creative changes the values, never the components. The only fixed colours outside the roles are the Creative eyes (white #f4fbf9 eyeballs on a dark see-through pill).",
+        "body": "Both modes fill the same roles (paper, ink, rule, accent, cool, ok), so every component works in either. Creative changes values, never components.",
         "section": "colors"
       },
       {
-        "name": "The One Voice Rule",
-        "body": "Onest is the only typeface on the site, the share image and the favicon. Hierarchy comes from size and weight. (The CV PDF is the one exception: it uses Helvetica, and Courier for dates, so it opens the same in every reader.)",
+        "name": "The System Writes Mono Rule",
+        "body": "Atkinson Hyperlegible Mono is only for what a system writes: timeline dates, the email address in Let's talk, the year in the footer. Never on a label, heading or button.",
         "section": "typography"
       },
       {
         "name": "The Sentence Case Rule",
-        "body": "Labels, chips, tabs and badges are short, sentence case and unspaced. No all-caps labels and no small text above headings.",
+        "body": "Labels, chips and footer titles are the body face a step smaller, in sentence case. No all-caps.",
         "section": "typography"
       },
       {
-        "name": "The Flat Tiles Rule",
-        "body": "Borders, not shadows, separate tiles, rows and panels. Shadow is only for things that float: project cards and the mode button.",
+        "name": "The Flat Chrome Rule",
+        "body": "No shadows, glows or gradients in the page chrome. Elevation is lightness only. The one exception is the Creative skyline, an illustration inside its own canvas.",
         "section": "elevation"
+      },
+      {
+        "name": "The One Surface Rule",
+        "body": "Panels that sit together are one surface split by 1px seams (the project index, the skills), not separate cards with gaps.",
+        "section": "shapes"
       }
     ],
     "dos": [
-      "Do keep Email me in the sticky menu on every screen size, and Download CV in the intro and Let's talk.",
-      "Do use the accent only for the main action, the current section, the current job, tags, the photo ring and focus outlines.",
-      "Do build new boxes from the shared roles (surface, soft, hairline, accent) so they work in both modes without extra rules.",
-      "Do separate tiles and rows with 1px hairline borders and soft corners (1rem for tiles, 1.125rem for cards).",
-      "Do put a Tabler outline icon, inlined as SVG, next to every button label.",
-      "Do keep Creative the same layout and words, with extras that load only after switching and stop when motion is reduced."
+      "Do fill the shared roles (paper, paper-2, paper-3, ink, rule, accent, cool) so a component works in both modes without extra rules.",
+      "Do use amber only for the person and the one main action; use cool blue only for what a system measured.",
+      "Do set headings in Host Grotesk 500 with -0.03em tracking, never bold.",
+      "Do keep buttons 48px tall (44px small) with icon plus label: amber fill for the main action, hairline outline for the rest.",
+      "Do keep the hero's bottom padding at clamp(8rem, 21vh, 13rem) in both modes.",
+      "Do stop all motion under prefers-reduced-motion."
     ],
     "donts": [
-      "Don't add a second accent colour or a second font.",
-      "Don't hide navigation or facts behind hover, or use unusual layouts that make visitors hunt for information.",
-      "Don't add small all-caps labels above headings.",
-      "Don't put shadows on tiles, rows or panels; shadow is for project cards and the mode button.",
-      "Don't make anything in Creative needed to find a fact."
+      "Don't swap amber and blue, or add a third signal colour.",
+      "Don't use the mono face on labels, headings or buttons.",
+      "Don't use all-caps labels.",
+      "Don't add shadows, glows or gradients to page chrome, hover lifts, parallax or scroll reveals.",
+      "Don't treat the skyline canvas as part of the token system or reuse its dusk glow in the page."
     ]
   }
 }

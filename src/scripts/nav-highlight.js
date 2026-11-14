@@ -27,3 +27,10 @@ const observer = new IntersectionObserver(
   { rootMargin: '-45% 0px -50% 0px' },
 );
 sections.forEach((section) => observer.observe(section));
+
+// The observer can miss a fast jump back to the top; clear the mark there too.
+const clearAtTop = () => {
+  if (window.scrollY < 200) mark(null);
+};
+window.addEventListener('scroll', clearAtTop, { passive: true });
+clearAtTop();

@@ -1,0 +1,30 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Index-first",
+  "theme": "console",
+  "hero": "Index",
+  "nav": "floating pill",
+  "footer": "index columns",
+  "imagery": "product",
+  "photos": [],
+  "signature": "the email address set as a reading",
+  "sections": [
+   "hero",
+   "projects",
+   "experience+education",
+   "skills",
+   "contact",
+   "footer"
+  ],
+  "waived": [
+   "11",
+   "23",
+   "79"
+  ],
+  "prompt": "redesign the portfolio with your own decisions",
+  "date": "2026-10-30"
+ }
+]

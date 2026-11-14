@@ -1,5 +1,5 @@
 // Creative-only extras, loaded only after a visitor switches to Creative:
-// eyes that follow the cursor on the gaze tracking project (idea from
+// eyes that follow the cursor on the gaze tracking project's thumbnail (idea from
 // bencho.dev's "Eye tracker" block, rebuilt in plain JavaScript), and the
 // intro photo flipping over to a 3D avatar on hover (Microsoft Fluent 3D
 // emoji, MIT).
@@ -9,9 +9,11 @@ const MARK = 'data-creative';
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let stopEyes = () => {};
 let stopFlip = () => {};
+let stopBackdrop = () => {};
+let backdropToken = 0;
 
 function mountEyes() {
-  const media = document.querySelector('[data-project="gaze-tracking-system"] .card__media');
+  const media = document.querySelector('[data-project="gaze-tracking-system"] .index__thumb');
   if (!media) return;
   const eyes = document.createElement('div');
   eyes.className = 'eyes';
@@ -71,14 +73,28 @@ function mountFlip() {
   };
 }
 
+// Three.js is a separate chunk, fetched only when the hero backdrop is mounted.
+function mountBackdrop() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  const token = ++backdropToken;
+  import('./skyline.js').then(({ mountSkyline }) => {
+    if (token === backdropToken) stopBackdrop = mountSkyline(hero);
+  });
+}
+
 export function enable() {
   if (document.querySelector(`[${MARK}]`)) return;
   mountEyes();
   mountFlip();
+  mountBackdrop();
 }
 
 export function disable() {
+  backdropToken++;
   stopEyes();
   stopFlip();
+  stopBackdrop();
+  stopBackdrop = () => {};
   for (const el of document.querySelectorAll(`[${MARK}]`)) el.remove();
 }

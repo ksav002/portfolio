@@ -1,7 +1,7 @@
 export const skillGroups = [
   {
     category: 'Frontend',
-    items: ['React', 'Redux'],
+    items: ['React', 'JavaScript', 'HTML', 'CSS'],
   },
   {
     category: 'Backend',
@@ -9,6 +9,6 @@ export const skillGroups = [
   },
   {
     category: 'AI & automation',
-    items: ['n8n', 'Pinecone (RAG)', 'Webhooks', 'AI Agents'],
+    items: ['n8n', 'RAG', 'AI Agents'],
   },
 ]

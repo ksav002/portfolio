@@ -1,10 +1,13 @@
 ---
-import '@fontsource-variable/onest/index.css';
-import onestLatin from '@fontsource-variable/onest/files/onest-latin-wght-normal.woff2?url';
+import '@fontsource/host-grotesk/400.css';
+import '@fontsource/host-grotesk/500.css';
+import '@fontsource/atkinson-hyperlegible-mono/400.css';
+import '@fontsource/atkinson-hyperlegible-mono/500.css';
+import hostGroteskLatin from '@fontsource/host-grotesk/files/host-grotesk-latin-500-normal.woff2?url';
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
 import {
-  SITE_URL, profile, pageTitle, factSentence, ogImagePath, year, shownSocials,
+  SITE_URL, profile, pageTitle, factSentence, ogImagePath, year, allSocials, whatsapp, cvPath,
 } from '../lib/site.js';
 import { profileGraph } from '../lib/seo.js';
 
@@ -29,7 +32,7 @@ const sections = [
   { id: 'skills', label: 'Skills' },
   { id: 'contact', label: 'Contact' },
 ];
-const socialIcon = { GitHub: 'brand-github', LinkedIn: 'brand-linkedin' };
+const socialIcon = { GitHub: 'brand-github', LinkedIn: 'brand-linkedin', Facebook: 'brand-facebook', Instagram: 'brand-instagram' };
 ---
 <!doctype html>
 <html lang="en">
@@ -40,17 +43,17 @@ const socialIcon = { GitHub: 'brand-github', LinkedIn: 'brand-linkedin' };
     <meta name="description" content={description} />
     {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <meta name="author" content={profile.name} />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#f9f6f1" />
     <script is:inline>
       // Apply a saved Creative choice before the first paint, so the wrong mode never flashes.
       try {
         if (localStorage.getItem('kp-mode') === 'creative') {
           document.documentElement.dataset.mode = 'creative';
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0a1211');
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0e1115');
         }
       } catch (e) {}
     </script>
-    <link rel="preload" href={onestLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={hostGroteskLatin} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -77,9 +80,10 @@ const socialIcon = { GitHub: 'brand-github', LinkedIn: 'brand-linkedin' };
     {structuredData && <script type="application/ld+json" set:html={JSON.stringify(profileGraph())} />}
   </head>
   <body>
+    <div class="progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="nav">
-      <div class="page nav__bar">
+      <div class="nav__pill">
         <a class="nav__name" href={`${home}#top`}>{profile.name}</a>
         <nav class="nav__links" aria-label="Sections">
           {sections.map((s) => <a href={`${home}#${s.id}`} data-section-link={s.id}>{s.label}</a>)}
@@ -98,12 +102,33 @@ const socialIcon = { GitHub: 'brand-github', LinkedIn: 'brand-linkedin' };
     </main>
 
     <footer class="footer">
-      <div class="page footer__bar">
-        <p>© {year} {profile.name}</p>
-        <div class="footer__links">
-          {shownSocials.map((s) => (
-            <a href={s.href} target="_blank" rel="me noopener" aria-label={s.label}><Icon name={socialIcon[s.label]} /></a>
-          ))}
+      <div class="container footer__grid">
+        <div class="footer__who">
+          <p class="footer__name">{profile.name}</p>
+          <p>{profile.role.replace('Full stack', 'Full-stack')}</p>
+          <p class="footer__year">© {year}</p>
+        </div>
+        <div>
+          <h2 class="footer__title">Contact</h2>
+          <ul>
+            <li><a href={`mailto:${profile.email}`}>Email</a></li>
+            <li><a href={whatsapp.href} target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href={cvPath} download>CV (PDF)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Profiles</h2>
+          <ul>
+            {allSocials.map((s) => (
+              <li><a href={s.href} target="_blank" rel="me noopener"><Icon name={socialIcon[s.label]} />{s.label}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">On this page</h2>
+          <ul>
+            {sections.map((s) => <li><a href={`${home}#${s.id}`}>{s.label}</a></li>)}
+          </ul>
         </div>
       </div>
     </footer>
@@ -115,6 +140,8 @@ const socialIcon = { GitHub: 'brand-github', LinkedIn: 'brand-linkedin' };
 
     <script>
       import '../scripts/mode.js';
+      import '../scripts/progress.js';
+      import '../scripts/reveal.js';
     </script>
   </body>
 </html>

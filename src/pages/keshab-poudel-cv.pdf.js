@@ -9,7 +9,7 @@ import {
 const INK = rgb(0.063, 0.078, 0.071);
 const GREY = rgb(0.278, 0.314, 0.294);
 const HAIR = rgb(0.773, 0.804, 0.784);
-const TEAL = rgb(0.059, 0.463, 0.431); // teal #0f766e, the site's accent
+const ACCENT = rgb(0.604, 0.353, 0); // amber #9a5a00, the site's accent
 
 export async function GET() {
   const pdf = await PDFDocument.create();
@@ -82,7 +82,7 @@ export async function GET() {
   const heading = (title) => {
     newPageIfNeeded(48);
     y -= 14;
-    rule(1.5, TEAL);
+    rule(1.5, ACCENT);
     y -= 17;
     page.drawText(title, { x: M, y, size: 12.5, font: bold, color: INK });
     y -= 16;
@@ -105,7 +105,7 @@ export async function GET() {
     cy -= 13;
   }
   y -= 64;
-  page.drawLine({ start: { x: M, y }, end: { x: right, y }, thickness: 2.5, color: TEAL });
+  page.drawLine({ start: { x: M, y }, end: { x: right, y }, thickness: 2.5, color: ACCENT });
   y -= 20;
 
   // Summary
@@ -138,7 +138,7 @@ export async function GET() {
     page.drawText(project.title, { x: M, y, size: 10.5, font: bold, color: INK });
     const url = repoPath(project.codeUrl);
     const uw = regular.widthOfTextAtSize(url, 8.5);
-    page.drawText(url, { x: right - uw, y, size: 8.5, font: regular, color: TEAL });
+    page.drawText(url, { x: right - uw, y, size: 8.5, font: regular, color: ACCENT });
     link(right - uw, y, uw, 8.5, project.codeUrl);
     y -= 14;
     paragraph(project.summary, { size: 9.5, color: INK });

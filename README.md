@@ -5,7 +5,7 @@ My personal portfolio, live at **[poudelkeshab.com.np](https://poudelkeshab.com.
 It's a one-page site about who I am, what I build, and how to reach me. The page has two looks:
 
 - **Professional** (light) is the default.
-- **Creative** (dark) is turned on with the round button in the bottom-right corner. It adds a couple of small extras and remembers your choice.
+- **Creative** (dark) is turned on with the round button in the bottom-right corner. It adds a Kathmandu skyline behind the hero (Three.js), eyes that follow the cursor and a 3D avatar on the photo, and it remembers your choice.
 
 The site is static, built with [Astro](https://astro.build), with no front-end framework. Hosting is GitHub Pages.
 
@@ -14,7 +14,8 @@ The site is static, built with [Astro](https://astro.build), with no front-end f
 | Part | What it uses |
 |---|---|
 | Site | Astro 7 (static output), plain CSS and a few small JavaScript files |
-| Font and icons | Onest (self-hosted through Fontsource), Tabler icons (inlined as SVG at build time) |
+| Creative skyline | Three.js, loaded only after switching to Creative |
+| Fonts and icons | Host Grotesk and Atkinson Hyperlegible Mono (self-hosted through Fontsource), Tabler icons (inlined as SVG at build time) |
 | CV | `pdf-lib`: a text PDF built from the site data on every build |
 | Share image, favicons, images | `satori` and `sharp` |
 | SEO | `@astrojs/sitemap`, JSON-LD (`ProfilePage`, `Person`, projects), `llms.txt` |
@@ -55,8 +56,8 @@ src/
     og.png.js                builds /og.png (link preview image)
     llms.txt.js              builds /llms.txt (plain-text summary for AI tools)
   components/    Icon.astro (Tabler icons), Picture.astro (responsive images)
-  scripts/       mode switch, Creative extras, copy button, menu highlight
-  styles/        global.css: both modes and every component
+  scripts/       mode switch, Creative extras (skyline.js, creative.js, creative.css), scroll line, copy button, menu highlight
+  styles/        tokens.css (values), base.css (resets), global.css (every component)
 scripts/         image and favicon generators
 public/          images, favicons, robots.txt, CNAME
 ```
