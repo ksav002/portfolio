@@ -19,3 +19,5 @@ dist
 
 # Private family data: never commit or publish
 src/data/familyData.js
+
+.playwright-mcp
